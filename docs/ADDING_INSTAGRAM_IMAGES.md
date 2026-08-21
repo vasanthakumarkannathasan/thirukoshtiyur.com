@@ -358,7 +358,7 @@ download (1).jpg
 ### **Alternative Contacts:**
 - **Temple Office**: 04575-241233
 - **Email**: sowmiyan@sancharnet.in
-- **Administrative**: Mr. Babu Samy - 9047904690
+- **Administrative**: Mr. Babu Samy - 8838336460
 
 ---
 

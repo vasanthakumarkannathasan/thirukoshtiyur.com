@@ -9,7 +9,7 @@ Your temple website now has two powerful communication features:
 - Bouncing animation to attract attention
 - Opens WhatsApp chat with pre-filled message
 - Mobile and desktop responsive
-- Direct chat link to: **+91 90479 04690**
+- Direct chat link to: **+91 88383 36460**
 
 ### ✅ **2. Visitor Comments Form**
 - Beautiful contact form for visitor feedback
@@ -32,14 +32,14 @@ Your temple website now has two powerful communication features:
 - **Animation**: Gentle bounce + pulse effect
 
 ### **Phone Number:**
-Currently set to: **+91 90479 04690** (Mr. Babu Samy)
+Currently set to: **+91 88383 36460** (Mr. Babu Samy)
 
 ### **To Change WhatsApp Number:**
 Edit `index.html` around line 1011:
 ```html
-<a href="https://wa.me/919047904690?text=..." 
+<a href="https://wa.me/918838336460?text=..." 
 ```
-Replace `919047904690` with your number (include country code, no + or spaces)
+Replace `918838336460` with your number (include country code, no + or spaces)
 
 ### **To Change Pre-filled Message:**
 Edit the `text=` parameter in the URL. Use `%20` for spaces.
@@ -281,7 +281,7 @@ index.html                        ✅ Added form section + WhatsApp button
 ### **Change WhatsApp Phone Number:**
 Edit `index.html` line ~1011:
 ```html
-<a href="https://wa.me/919047904690?text=...">
+<a href="https://wa.me/918838336460?text=...">
 ```
 
 ### **Change Email Recipient:**
@@ -445,7 +445,7 @@ After implementation, you should see:
 ### **WhatsApp button not working:**
 
 1. **Check Phone Number**: Must include country code (91 for India)
-2. **Check URL Format**: `https://wa.me/919047904690`
+2. **Check URL Format**: `https://wa.me/918838336460`
 3. **Check Button HTML**: Verify link is correct
 4. **Test Different Browser**: Try Chrome, Firefox
 5. **Check Mobile**: WhatsApp app must be installed
@@ -509,7 +509,7 @@ After implementation, you should see:
 ### **Temple Website Support:**
 - Email: sowmiyan@sancharnet.in
 - Phone: 04575-241233
-- WhatsApp: +91 90479 04690
+- WhatsApp: +91 88383 36460
 
 ---
 
