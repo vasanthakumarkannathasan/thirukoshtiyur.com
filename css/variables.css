@@ -1,0 +1,173 @@
+/**
+ * CSS Custom Properties (Variables)
+ * Thirukoshtiyur Temple Website
+ * 
+ * Central configuration for colors, fonts, spacing, and other design tokens
+ */
+
+:root {
+  /* ===== COLOR PALETTE ===== */
+  
+  /* Primary Colors - Temple Theme */
+  --color-primary: #9B2226;           /* Temple Red (Gopuram) */
+  --color-primary-light: #AE2012;     /* Lighter red */
+  --color-primary-dark: #6A1619;      /* Darker red */
+  
+  --color-secondary: #CA6702;         /* Sacred Orange */
+  --color-secondary-light: #EE9B00;   /* Bright orange */
+  --color-secondary-dark: #9B5002;    /* Deep orange */
+  
+  --color-accent: #BB9457;            /* Gold Accent */
+  --color-accent-light: #D4AF78;      /* Light gold */
+  --color-accent-dark: #8B6F47;       /* Deep gold */
+  
+  /* Neutral Colors */
+  --color-white: #FFFFFF;
+  --color-stone: #F8F9FA;             /* Stone white */
+  --color-beige: #FFF8E1;             /* Soft beige */
+  --color-gray-light: #E9ECEF;
+  --color-gray: #ADB5BD;
+  --color-gray-dark: #495057;
+  --color-brown: #3E2723;             /* Deep brown */
+  --color-black: #1A1A1A;
+  
+  /* Spiritual Accent Colors */
+  --color-blue: #0077B6;              /* Peacock blue */
+  --color-blue-light: #48CAE4;
+  --color-pink: #F48FB1;              /* Lotus pink */
+  --color-green: #2D6A4F;             /* Sacred green */
+  
+  /* Semantic Colors */
+  --color-success: #2D6A4F;
+  --color-warning: #EE9B00;
+  --color-error: #9B2226;
+  --color-info: #0077B6;
+  
+  /* Background Colors */
+  --bg-primary: var(--color-white);
+  --bg-secondary: var(--color-stone);
+  --bg-tertiary: var(--color-beige);
+  --bg-dark: var(--color-brown);
+  
+  /* Text Colors */
+  --text-primary: var(--color-brown);
+  --text-secondary: var(--color-gray-dark);
+  --text-light: var(--color-gray);
+  --text-inverse: var(--color-white);
+  --text-accent: var(--color-primary);
+  
+  /* ===== TYPOGRAPHY ===== */
+  
+  /* Font Families */
+  --font-heading: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-tamil: 'Noto Sans Tamil', 'Lohit Tamil', sans-serif;
+  
+  /* Font Sizes - Fluid Typography */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);      /* 12-14px */
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);        /* 14-16px */
+  --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);      /* 16-18px */
+  --font-size-md: clamp(1.125rem, 1.05rem + 0.375vw, 1.25rem);    /* 18-20px */
+  --font-size-lg: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);        /* 20-24px */
+  --font-size-xl: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);          /* 24-32px */
+  --font-size-2xl: clamp(2rem, 1.75rem + 1.25vw, 3rem);           /* 32-48px */
+  --font-size-3xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);             /* 40-64px */
+  
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+  
+  /* ===== SPACING ===== */
+  
+  --space-xs: 0.25rem;      /* 4px */
+  --space-sm: 0.5rem;       /* 8px */
+  --space-md: 1rem;         /* 16px */
+  --space-lg: 1.5rem;       /* 24px */
+  --space-xl: 2rem;         /* 32px */
+  --space-2xl: 3rem;        /* 48px */
+  --space-3xl: 4rem;        /* 64px */
+  --space-4xl: 6rem;        /* 96px */
+  --space-5xl: 8rem;        /* 128px */
+  
+  /* ===== LAYOUT ===== */
+  
+  --container-max-width: 1200px;
+  --container-padding: var(--space-xl);
+  --content-max-width: 800px;
+  
+  /* Grid */
+  --grid-gap: var(--space-lg);
+  --grid-columns: 12;
+  
+  /* ===== BORDERS ===== */
+  
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+  
+  --border-width: 1px;
+  --border-width-thick: 2px;
+  
+  --border-color: var(--color-gray-light);
+  --border-color-dark: var(--color-gray);
+  
+  /* ===== SHADOWS ===== */
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* ===== TRANSITIONS ===== */
+  
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+  
+  --transition-all: all var(--transition-base);
+  --transition-colors: color var(--transition-base), background-color var(--transition-base), border-color var(--transition-base);
+  --transition-transform: transform var(--transition-base);
+  --transition-opacity: opacity var(--transition-base);
+  
+  /* ===== Z-INDEX ===== */
+  
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  
+  /* ===== BREAKPOINTS (for reference in JS) ===== */
+  
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+}
+
+/* ===== DARK MODE SUPPORT (Future) ===== */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: var(--color-brown);
+    --bg-secondary: #2A1A1A;
+    --text-primary: var(--color-stone);
+    --text-secondary: var(--color-gray-light);
+  }
+}
+*/

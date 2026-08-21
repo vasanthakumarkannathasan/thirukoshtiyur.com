@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "icon": "🔔",
+    "text": "Upcoming Brahmotsavam Festival - December 2026",
+    "link": "#festivals"
+  },
+  {
+    "id": 2,
+    "icon": "🛕",
+    "text": "Daily Poojas - Morning 7:00 AM to 12:00 PM | Evening 4:00 PM to 8:00 PM",
+    "link": "#timings"
+  },
+  {
+    "id": 3,
+    "icon": "🙏",
+    "text": "Free Services Available - Accommodation, Food & Temple Information",
+    "link": "#services"
+  },
+  {
+    "id": 4,
+    "icon": "📍",
+    "text": "Located 25 km from Sivagangai | 30 km from Karaikudi | Tamil Nadu",
+    "link": "#location"
+  },
+  {
+    "id": 5,
+    "icon": "✨",
+    "text": "One of 108 Divya Desams - Sacred Vishnu Temple",
+    "link": "#about"
+  }
+]

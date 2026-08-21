@@ -1,0 +1,281 @@
+/**
+ * Footer Component
+ * Thirukoshtiyur Temple Website
+ * 
+ * Site footer with information, links, and copyright
+ */
+
+.site-footer {
+  background: linear-gradient(180deg, var(--color-brown) 0%, #2A1A1A 100%);
+  color: var(--color-stone);
+  padding: var(--space-4xl) 0 var(--space-xl);
+  margin-top: var(--space-5xl);
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-3xl);
+  max-width: var(--container-max-width);
+  margin: 0 auto var(--space-3xl);
+  padding: 0 var(--space-lg);
+}
+
+.footer-section-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  margin-bottom: var(--space-lg);
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+.footer-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-accent);
+}
+
+/* About Section */
+.footer-about {
+  max-width: 350px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.footer-logo-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.footer-logo-text {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+}
+
+.footer-description {
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-gray-light);
+  margin-bottom: var(--space-lg);
+}
+
+.footer-mantra {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-style: italic;
+  color: var(--color-accent-light);
+  margin-top: var(--space-md);
+}
+
+/* Quick Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--space-md);
+}
+
+.footer-links a {
+  color: var(--color-gray-light);
+  text-decoration: none;
+  font-size: var(--font-size-base);
+  transition: var(--transition-colors);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.footer-links a::before {
+  content: '→';
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: var(--transition-all);
+}
+
+.footer-links a:hover {
+  color: var(--color-accent);
+  transform: translateX(5px);
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Contact Info */
+.footer-contact-item {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.footer-contact-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  color: var(--color-accent);
+}
+
+.footer-contact-content {
+  flex: 1;
+}
+
+.footer-contact-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-xs);
+}
+
+.footer-contact-text {
+  font-size: var(--font-size-base);
+  color: var(--color-stone);
+  line-height: var(--line-height-normal);
+}
+
+.footer-contact-text a {
+  color: var(--color-stone);
+  text-decoration: none;
+  transition: var(--transition-colors);
+}
+
+.footer-contact-text a:hover {
+  color: var(--color-accent);
+}
+
+/* Timing Info */
+.footer-timings {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: var(--space-lg);
+  border-radius: var(--border-radius-md);
+  border-left: 3px solid var(--color-accent);
+}
+
+.footer-timing-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-sm);
+  font-size: var(--font-size-sm);
+}
+
+.footer-timing-item:last-child {
+  margin-bottom: 0;
+}
+
+.footer-timing-label {
+  color: var(--color-gray-light);
+}
+
+.footer-timing-value {
+  color: var(--color-stone);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.footer-social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius-md);
+  color: var(--color-stone);
+  transition: var(--transition-all);
+}
+
+.footer-social-link:hover {
+  background-color: var(--color-accent);
+  color: var(--color-brown);
+  transform: translateY(-3px);
+}
+
+.footer-social-link svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: var(--space-xl) var(--space-lg) 0;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
+
+.footer-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+}
+
+.footer-copyright {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-light);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: var(--space-xl);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-bottom-links a {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-light);
+  text-decoration: none;
+  transition: var(--transition-colors);
+}
+
+.footer-bottom-links a:hover {
+  color: var(--color-accent);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-about {
+    max-width: none;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-bottom-links {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+}

@@ -1,0 +1,295 @@
+/**
+ * Base Styles
+ * Thirukoshtiyur Temple Website
+ * 
+ * Foundation styles applied globally
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+Tamil:wght@300;400;500;600;700&display=swap');
+
+/* ===== Body ===== */
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  overflow-x: hidden;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+}
+
+h4 {
+  font-size: var(--font-size-lg);
+}
+
+h5 {
+  font-size: var(--font-size-md);
+}
+
+h6 {
+  font-size: var(--font-size-base);
+}
+
+p {
+  margin-bottom: var(--space-md);
+  line-height: var(--line-height-relaxed);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition-colors);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+/* ===== Images ===== */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Containers ===== */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
+}
+
+.content-container {
+  max-width: var(--content-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: var(--space-4xl) 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: var(--space-3xl) 0;
+  }
+}
+
+/* ===== Utility Classes ===== */
+
+/* Text Alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Text Colors */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-light { color: var(--text-light); }
+.text-inverse { color: var(--text-inverse); }
+.text-accent { color: var(--color-primary); }
+
+/* Background Colors */
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+.bg-tertiary { background-color: var(--bg-tertiary); }
+.bg-dark { background-color: var(--bg-dark); }
+.bg-accent { background-color: var(--color-primary); }
+
+/* Spacing */
+.mt-0 { margin-top: 0; }
+.mt-sm { margin-top: var(--space-sm); }
+.mt-md { margin-top: var(--space-md); }
+.mt-lg { margin-top: var(--space-lg); }
+.mt-xl { margin-top: var(--space-xl); }
+.mt-2xl { margin-top: var(--space-2xl); }
+
+.mb-0 { margin-bottom: 0; }
+.mb-sm { margin-bottom: var(--space-sm); }
+.mb-md { margin-bottom: var(--space-md); }
+.mb-lg { margin-bottom: var(--space-lg); }
+.mb-xl { margin-bottom: var(--space-xl); }
+.mb-2xl { margin-bottom: var(--space-2xl); }
+
+.pt-0 { padding-top: 0; }
+.pt-lg { padding-top: var(--space-lg); }
+.pt-xl { padding-top: var(--space-xl); }
+.pt-2xl { padding-top: var(--space-2xl); }
+
+.pb-0 { padding-bottom: 0; }
+.pb-lg { padding-bottom: var(--space-lg); }
+.pb-xl { padding-bottom: var(--space-xl); }
+.pb-2xl { padding-bottom: var(--space-2xl); }
+
+/* Display */
+.d-none { display: none; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-flex { display: flex; }
+.d-grid { display: grid; }
+
+/* Flexbox Utilities */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-start { justify-content: flex-start; }
+.justify-end { justify-content: flex-end; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around { justify-content: space-around; }
+
+.align-start { align-items: flex-start; }
+.align-end { align-items: flex-end; }
+.align-center { align-items: center; }
+.align-stretch { align-items: stretch; }
+
+.gap-sm { gap: var(--space-sm); }
+.gap-md { gap: var(--space-md); }
+.gap-lg { gap: var(--space-lg); }
+.gap-xl { gap: var(--space-xl); }
+
+/* Grid Utilities */
+.grid {
+  display: grid;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-3,
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* Visibility */
+.hidden { display: none !important; }
+.visible { display: block !important; }
+
+@media (max-width: 768px) {
+  .hidden-mobile { display: none !important; }
+}
+
+@media (min-width: 769px) {
+  .hidden-desktop { display: none !important; }
+}
+
+/* Decorative Elements */
+.divider {
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-accent);
+  margin: var(--space-lg) auto;
+}
+
+.divider-full {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: var(--space-xl) 0;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-3xl);
+}
+
+.section-title {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+  margin-bottom: var(--space-md);
+}
+
+.section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-normal);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Loading State */
+.loading {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Smooth Scrolling Anchors */
+html {
+  scroll-padding-top: 100px; /* Account for fixed header */
+}

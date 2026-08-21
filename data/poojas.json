@@ -1,0 +1,32 @@
+[
+  {
+    "time": "7:00 AM",
+    "name": "Visvarupam",
+    "description": "Morning darshan begins"
+  },
+  {
+    "time": "8:00 AM",
+    "name": "Kalasandi",
+    "description": "Morning pooja ritual"
+  },
+  {
+    "time": "12:30 PM",
+    "name": "Uchikalam",
+    "description": "Noon offering"
+  },
+  {
+    "time": "4:30 PM",
+    "name": "Temple Reopening",
+    "description": "Evening darshan begins"
+  },
+  {
+    "time": "5:00 PM",
+    "name": "Sathyaratcha",
+    "description": "Evening pooja"
+  },
+  {
+    "time": "8:00 PM",
+    "name": "Arthasamam",
+    "description": "Final pooja of the day"
+  }
+]

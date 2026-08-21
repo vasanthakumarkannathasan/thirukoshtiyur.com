@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Thirukalyana Utsavam",
+    "month": "January",
+    "description": "Celestial marriage ceremony of the Lord"
+  },
+  {
+    "id": 2,
+    "title": "Teppa Utsavam",
+    "month": "February",
+    "description": "Float festival in the temple tank"
+  },
+  {
+    "id": 3,
+    "title": "Panguni Utsavam",
+    "month": "March",
+    "description": "Grand spring festival celebration"
+  },
+  {
+    "id": 4,
+    "title": "Tamil New Year & Hanuman Jayanthi",
+    "month": "April",
+    "description": "New year celebrations and Lord Hanuman's birthday"
+  },
+  {
+    "id": 5,
+    "title": "Vasandoschavam",
+    "month": "May",
+    "description": "Spring festival celebrations"
+  },
+  {
+    "id": 6,
+    "title": "Muppala Utsavam",
+    "month": "June",
+    "description": "Three-day grand celebration"
+  },
+  {
+    "id": 7,
+    "title": "Garuda Jayanthi",
+    "month": "July",
+    "description": "Birth celebration of Lord Garuda"
+  },
+  {
+    "id": 8,
+    "title": "Krishna Jayanthi & Pavitra Utsavam",
+    "month": "August",
+    "description": "Lord Krishna's birthday and sacred thread ceremony"
+  },
+  {
+    "id": 9,
+    "title": "Navarathiri Utsavam",
+    "month": "September",
+    "description": "Nine nights of devotional celebrations"
+  },
+  {
+    "id": 10,
+    "title": "Manavala Mamunigal Utsavam",
+    "month": "October",
+    "description": "Celebration honoring the great Acharya"
+  },
+  {
+    "id": 11,
+    "title": "Karthigai & Thirumangai Alwar Utsavam",
+    "month": "November",
+    "description": "Festival of lights and Alwar celebration"
+  },
+  {
+    "id": 12,
+    "title": "Adhyayana Utsavam",
+    "month": "December",
+    "description": "Scripture recitation festival"
+  }
+]

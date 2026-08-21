@@ -1,0 +1,133 @@
+/**
+ * Button Components
+ * Thirukoshtiyur Temple Website
+ * 
+ * Reusable button styles
+ */
+
+.btn {
+  display: inline-block;
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--border-radius-lg);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: var(--transition-all);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Button Variants */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: var(--color-white);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border-color: var(--color-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-dark);
+  border-color: var(--color-secondary-dark);
+  color: var(--color-white);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-outline-light {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.btn-ghost {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--color-white);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: var(--space-sm) var(--space-md);
+  font-size: var(--font-size-sm);
+}
+
+.btn-lg {
+  padding: var(--space-lg) var(--space-2xl);
+  font-size: var(--font-size-lg);
+}
+
+/* Button with Icon */
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.btn-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Full Width Button */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Disabled State */
+.btn:disabled,
+.btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
