@@ -183,6 +183,58 @@
       transition: 0.3s;
     }
     
+    /* Notification Banner */
+    .notification-banner {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+      color: white;
+      padding: 0.8rem 0;
+      z-index: 999;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
+    }
+    
+    .notification-content {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll-left 30s linear infinite;
+    }
+    
+    .notification-item {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 3rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    .notification-icon {
+      margin-right: 0.8rem;
+      font-size: 1.3rem;
+      animation: pulse-icon 2s ease-in-out infinite;
+    }
+    
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    
+    @keyframes pulse-icon {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+    
     /* Hero Section - Modern & Impressive */
     .hero {
       position: relative;
@@ -193,7 +245,7 @@
       justify-content: center;
       background: linear-gradient(135deg, #C41E3A 0%, #FF6B35 50%, #FFB703 100%);
       overflow: hidden;
-      margin-top: 70px;
+      margin-top: 120px;
     }
     
     .hero::before {
@@ -645,12 +697,22 @@
         padding: 1rem;
       }
       
+      .notification-banner {
+        top: 70px;
+        padding: 0.6rem 0;
+      }
+      
+      .notification-item {
+        font-size: 0.9rem;
+        padding: 0 2rem;
+      }
+      
       .nav-right {
         position: fixed;
-        top: 70px;
+        top: 120px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 120px);
         background: white;
         flex-direction: column;
         padding: 2rem;
@@ -677,7 +739,7 @@
       }
       
       .hero {
-        margin-top: 70px;
+        margin-top: 120px;
         min-height: 500px;
       }
       
@@ -741,6 +803,83 @@
       </div>
     </div>
   </nav>
+
+  <!-- Notification Banner -->
+  <div class="notification-banner">
+    <div class="notification-content">
+      <!-- Repeat items twice for seamless loop -->
+      <div class="notification-item" data-lang="en">
+        <span class="notification-icon">🙏</span>
+        <span>Welcome to Sri Sowmiya Narayana Perumal Temple - One of 108 Divya Desams</span>
+      </div>
+      <div class="notification-item" data-lang="en">
+        <span class="notification-icon">⏰</span>
+        <span>Temple Open: Morning 7:00 AM - 12:00 PM | Evening 4:00 PM - 8:00 PM</span>
+      </div>
+      <div class="notification-item" data-lang="en">
+        <span class="notification-icon">📍</span>
+        <span>Located in Sivaganga District, Tamil Nadu</span>
+      </div>
+      <div class="notification-item" data-lang="en">
+        <span class="notification-icon">🎉</span>
+        <span>Experience divine darshan of the Lord in three postures</span>
+      </div>
+      
+      <!-- Tamil notifications -->
+      <div class="notification-item tamil" data-lang="ta">
+        <span class="notification-icon">🙏</span>
+        <span>ஸ்ரீ சௌமிய நாராயண பெருமாள் திருக்கோயிலுக்கு உங்களை வரவேற்கிறோம் - 108 திவ்ய தேசங்களில் ஒன்று</span>
+      </div>
+      <div class="notification-item tamil" data-lang="ta">
+        <span class="notification-icon">⏰</span>
+        <span>கோயில் திறக்கும் நேரம்: காலை 7:00 - 12:00 | மாலை 4:00 - 8:00</span>
+      </div>
+      <div class="notification-item tamil" data-lang="ta">
+        <span class="notification-icon">📍</span>
+        <span>சிவகங்கை மாவட்டம், தமிழ்நாடு</span>
+      </div>
+      <div class="notification-item tamil" data-lang="ta">
+        <span class="notification-icon">🎉</span>
+        <span>மூன்று நிலைகளில் பெருமாள் தரிசனம்</span>
+      </div>
+      
+      <!-- Duplicate for seamless loop -->
+      <div class="notification-item" data-lang="en">
+        <span class="notification-icon">🙏</span>
+        <span>Welcome to Sri Sowmiya Narayana Perumal Temple - One of 108 Divya Desams</span>
+      </div>
+      <div class="notification-item" data-lang="en">
+        <span class="notification-icon">⏰</span>
+        <span>Temple Open: Morning 7:00 AM - 12:00 PM | Evening 4:00 PM - 8:00 PM</span>
+      </div>
+      <div class="notification-item" data-lang="en">
+        <span class="notification-icon">📍</span>
+        <span>Located in Sivaganga District, Tamil Nadu</span>
+      </div>
+      <div class="notification-item" data-lang="en">
+        <span class="notification-icon">🎉</span>
+        <span>Experience divine darshan of the Lord in three postures</span>
+      </div>
+      
+      <!-- Tamil duplicate -->
+      <div class="notification-item tamil" data-lang="ta">
+        <span class="notification-icon">🙏</span>
+        <span>ஸ்ரீ சௌமிய நாராயண பெருமாள் திருக்கோயிலுக்கு உங்களை வரவேற்கிறோம் - 108 திவ்ய தேசங்களில் ஒன்று</span>
+      </div>
+      <div class="notification-item tamil" data-lang="ta">
+        <span class="notification-icon">⏰</span>
+        <span>கோயில் திறக்கும் நேரம்: காலை 7:00 - 12:00 | மாலை 4:00 - 8:00</span>
+      </div>
+      <div class="notification-item tamil" data-lang="ta">
+        <span class="notification-icon">📍</span>
+        <span>சிவகங்கை மாவட்டம், தமிழ்நாடு</span>
+      </div>
+      <div class="notification-item tamil" data-lang="ta">
+        <span class="notification-icon">🎉</span>
+        <span>மூன்று நிலைகளில் பெருமாள் தரிசனம்</span>
+      </div>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero">
