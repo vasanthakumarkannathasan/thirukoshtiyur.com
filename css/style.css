@@ -17,6 +17,8 @@
 @import 'components/card.css';
 @import 'components/announcement-ticker.css';
 @import 'components/gallery.css';
+@import 'components/contact-form.css';
+@import 'components/whatsapp.css';
 @import 'components/footer.css';
 
 /* Page-specific styles can be added below or in separate files */
