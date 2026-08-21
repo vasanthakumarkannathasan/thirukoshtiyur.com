@@ -54,23 +54,6 @@
       font-family: 'Noto Sans Tamil', sans-serif;
     }
     
-    /* Language specific display */
-    [data-lang]:not([data-lang="en"]) {
-      display: none;
-    }
-    
-    body.tamil-mode [data-lang="en"] {
-      display: none;
-    }
-    
-    body.tamil-mode [data-lang="ta"] {
-      display: block;
-    }
-    
-    body.tamil-mode .tamil {
-      font-family: 'Noto Sans Tamil', sans-serif;
-    }
-    
     /* Modern Navbar */
     .navbar {
       position: fixed;
@@ -106,6 +89,7 @@
     }
     
     .logo-text h1 {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: 1.2rem;
       font-weight: 700;
       color: var(--primary);
@@ -113,14 +97,9 @@
     }
     
     .logo-text p {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: 0.85rem;
       color: var(--text-light);
-    }
-    
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
     }
     
     .nav-menu {
@@ -135,36 +114,11 @@
       color: var(--text);
       font-weight: 500;
       transition: color 0.3s;
+      font-family: 'Noto Sans Tamil', sans-serif;
     }
     
     .nav-menu a:hover {
       color: var(--primary);
-    }
-    
-    /* Language Switcher */
-    .lang-switcher {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border: none;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.3s;
-      box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .lang-switcher:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
-    }
-    
-    .lang-switcher:active {
-      transform: translateY(0);
     }
     
     .menu-toggle {
@@ -232,9 +186,11 @@
       font-weight: 600;
       margin-bottom: 1.5rem;
       border: 2px solid rgba(255, 255, 255, 0.3);
+      font-family: 'Noto Sans Tamil', sans-serif;
     }
     
     .hero h1 {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: clamp(2.5rem, 5vw, 4.5rem);
       font-weight: 800;
       margin-bottom: 1rem;
@@ -243,6 +199,7 @@
     }
     
     .hero-subtitle {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: clamp(1.2rem, 2.5vw, 1.8rem);
       margin-bottom: 1rem;
       opacity: 0.95;
@@ -271,6 +228,7 @@
     }
     
     .hero-mantra {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: clamp(1.3rem, 2vw, 1.8rem);
       font-weight: 600;
       letter-spacing: 2px;
@@ -295,6 +253,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
+      font-family: 'Noto Sans Tamil', sans-serif;
     }
     
     .btn-primary {
@@ -337,6 +296,7 @@
     }
     
     .section-title {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800;
       color: var(--primary);
@@ -344,6 +304,7 @@
     }
     
     .section-subtitle {
+      font-family: 'Noto Sans Tamil', serif;
       color: var(--text-light);
       font-size: 1.2rem;
     }
@@ -401,6 +362,7 @@
     }
     
     .card-title {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--primary);
@@ -408,6 +370,7 @@
     }
     
     .card-text {
+      font-family: 'Noto Sans Tamil', serif;
       color: var(--text-light);
       line-height: 1.8;
     }
@@ -455,6 +418,7 @@
     }
     
     .deity-info h2 {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800;
       color: var(--primary);
@@ -463,12 +427,14 @@
     }
     
     .deity-info h3 {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: 1.5rem;
       color: var(--secondary);
       margin-bottom: 2rem;
     }
     
     .deity-info p {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: 1.1rem;
       line-height: 1.8;
       color: var(--text-light);
@@ -505,6 +471,7 @@
     }
     
     .feature-text {
+      font-family: 'Noto Sans Tamil', serif;
       color: var(--text);
       font-weight: 600;
     }
@@ -518,12 +485,14 @@
     }
     
     .contact-cta h2 {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: clamp(2rem, 4vw, 3rem);
       font-weight: 800;
       margin-bottom: 1rem;
     }
     
     .contact-cta p {
+      font-family: 'Noto Sans Tamil', serif;
       font-size: 1.2rem;
       margin-bottom: 2rem;
       opacity: 0.95;
@@ -586,12 +555,14 @@
     }
     
     .footer-section h3 {
+      font-family: 'Noto Sans Tamil', serif;
       margin-bottom: 1rem;
       font-size: 1.3rem;
     }
     
     .footer-section p,
     .footer-section a {
+      font-family: 'Noto Sans Tamil', serif;
       color: rgba(255, 255, 255, 0.8);
       text-decoration: none;
       line-height: 2;
@@ -606,6 +577,7 @@
       text-align: center;
       padding-top: 2rem;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-family: 'Noto Sans Tamil', serif;
     }
     
     /* WhatsApp Button */
@@ -645,7 +617,7 @@
         padding: 1rem;
       }
       
-      .nav-right {
+      .nav-menu {
         position: fixed;
         top: 70px;
         left: -100%;
@@ -658,18 +630,8 @@
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
       }
       
-      .nav-right.active {
+      .nav-menu.active {
         left: 0;
-      }
-      
-      .nav-menu {
-        flex-direction: column;
-        width: 100%;
-      }
-      
-      .lang-switcher {
-        width: 100%;
-        justify-content: center;
       }
       
       .menu-toggle {
@@ -707,66 +669,47 @@
   <nav class="navbar">
     <div class="nav-content">
       <a href="/" class="logo">
-        <img src="./assets/images/logo/namam.svg" alt="Thirukoshtiyur Temple Logo">
+        <img src="./assets/images/logo/namam.svg" alt="திருக்கோஷ்டியூர் சின்னம்">
         <div class="logo-text">
-          <h1 data-lang="en">Thirukoshtiyur</h1>
-          <h1 data-lang="ta" class="tamil">திருக்கோஷ்டியூர்</h1>
-          <p data-lang="en">Southern Badrinath</p>
-          <p data-lang="ta" class="tamil">தென் பத்ரிநாத்</p>
+          <h1>திருக்கோஷ்டியூர்</h1>
+          <p>தென் பத்ரிநாத்</p>
         </div>
       </a>
       
-      <div class="menu-toggle" onclick="document.querySelector('.nav-right').classList.toggle('active')">
+      <div class="menu-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
         <span></span>
         <span></span>
         <span></span>
       </div>
       
-      <div class="nav-right">
-        <ul class="nav-menu">
-          <li><a href="/" data-lang="en">Home</a><a href="/" data-lang="ta" class="tamil">முகப்பு</a></li>
-          <li><a href="./pages/about.html" data-lang="en">About Temple</a><a href="./pages/about.html" data-lang="ta" class="tamil">கோயில் அறிமுகம்</a></li>
-          <li><a href="./pages/history.html" data-lang="en">History</a><a href="./pages/history.html" data-lang="ta" class="tamil">வரலாறு</a></li>
-          <li><a href="./pages/festivals.html" data-lang="en">Festivals</a><a href="./pages/festivals.html" data-lang="ta" class="tamil">திருவிழாக்கள்</a></li>
-          <li><a href="./pages/timings.html" data-lang="en">Timings</a><a href="./pages/timings.html" data-lang="ta" class="tamil">நேரங்கள்</a></li>
-          <li><a href="./pages/gallery.html" data-lang="en">Gallery</a><a href="./pages/gallery.html" data-lang="ta" class="tamil">படத்தொகுப்பு</a></li>
-          <li><a href="./pages/contact.html" data-lang="en">Contact</a><a href="./pages/contact.html" data-lang="ta" class="tamil">தொடர்பு</a></li>
-        </ul>
-        
-        <button class="lang-switcher" onclick="toggleLanguage()">
-          <span>🌐</span>
-          <span data-lang="en">தமிழ்</span>
-          <span data-lang="ta">English</span>
-        </button>
-      </div>
+      <ul class="nav-menu">
+        <li><a href="/">முகப்பு</a></li>
+        <li><a href="./pages/about.html">கோயில் அறிமுகம்</a></li>
+        <li><a href="./pages/history.html">வரலாறு</a></li>
+        <li><a href="./pages/festivals.html">திருவிழாக்கள்</a></li>
+        <li><a href="./pages/timings.html">நேரங்கள்</a></li>
+        <li><a href="./pages/gallery.html">படத்தொகுப்பு</a></li>
+        <li><a href="./pages/contact.html">தொடர்பு</a></li>
+      </ul>
     </div>
   </nav>
 
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <span class="hero-badge" data-lang="en">One of 108 Divya Desams</span>
-      <span class="hero-badge tamil" data-lang="ta">108 திவ்ய தேசங்களில் ஒன்று</span>
-      
-      <h1 data-lang="en">Sri Sowmiya Narayana Perumal</h1>
-      <h1 data-lang="ta" class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள்</h1>
-      
-      <p class="hero-subtitle" data-lang="en">Thirukoshtiyur Temple</p>
-      <p class="hero-subtitle tamil" data-lang="ta">திருக்கோஷ்டியூர் திருக்கோயில்</p>
+      <span class="hero-badge">108 திவ்ய தேசங்களில் ஒன்று</span>
+      <h1 class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள்</h1>
+      <p class="hero-subtitle tamil">திருக்கோஷ்டியூர் திருக்கோயில்</p>
       
       <div class="hero-divider">
-        <img src="./assets/images/logo/sangu-chakra.svg" alt="Conch and Discus">
+        <img src="./assets/images/logo/sangu-chakra.svg" alt="சங்கு சக்கரம்">
       </div>
       
-      <p class="hero-mantra" data-lang="en">|| Om Namo Narayanaya ||</p>
-      <p class="hero-mantra tamil" data-lang="ta">|| ஓம் நமோ நாராயணாய ||</p>
+      <p class="hero-mantra tamil">|| ஓம் நமோ நாராயணாய ||</p>
       
       <div class="hero-buttons">
-        <a href="./pages/about.html" class="btn btn-primary" data-lang="en">Learn About Temple</a>
-        <a href="./pages/about.html" class="btn btn-primary tamil" data-lang="ta">கோயில் பற்றி அறிக</a>
-        
-        <a href="./pages/contact.html" class="btn btn-outline" data-lang="en">Contact Us</a>
-        <a href="./pages/contact.html" class="btn btn-outline tamil" data-lang="ta">எங்களை தொடர்பு கொள்ளுங்கள்</a>
+        <a href="./pages/about.html" class="btn btn-primary">கோயில் பற்றி அறிக</a>
+        <a href="./pages/contact.html" class="btn btn-outline">எங்களை தொடர்பு கொள்ளுங்கள்</a>
       </div>
     </div>
   </section>
@@ -775,11 +718,8 @@
   <section class="quick-links">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title" data-lang="en">Quick Links</h2>
-        <h2 class="section-title tamil" data-lang="ta">விரைவு இணைப்புகள்</h2>
-        
-        <p class="section-subtitle" data-lang="en">Our Temple Services and Information</p>
-        <p class="section-subtitle tamil" data-lang="ta">எங்கள் கோயில் சேவைகள் மற்றும் தகவல்கள்</p>
+        <h2 class="section-title tamil">விரைவு இணைப்புகள்</h2>
+        <p class="section-subtitle tamil">எங்கள் கோயில் சேவைகள் மற்றும் தகவல்கள்</p>
       </div>
       
       <div class="cards-grid">
@@ -788,11 +728,8 @@
             <div class="card-icon">🛕</div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-lang="en">About Temple</h3>
-            <h3 class="card-title tamil" data-lang="ta">கோயில் அறிமுகம்</h3>
-            
-            <p class="card-text" data-lang="en">Complete history, significance and importance of Thirukoshtiyur Temple</p>
-            <p class="card-text tamil" data-lang="ta">திருக்கோஷ்டியூர் கோயிலின் முழு வரலாறு, சிறப்புகள் மற்றும் முக்கியத்துவம்</p>
+            <h3 class="card-title tamil">கோயில் அறிமுகம்</h3>
+            <p class="card-text tamil">திருக்கோஷ்டியூர் கோயிலின் முழு வரலாறு, சிறப்புகள் மற்றும் முக்கியத்துவம்</p>
           </div>
         </a>
         
@@ -801,11 +738,8 @@
             <div class="card-icon">⏰</div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-lang="en">Darshan Timings</h3>
-            <h3 class="card-title tamil" data-lang="ta">தரிசன நேரங்கள்</h3>
-            
-            <p class="card-text" data-lang="en">Daily pooja schedule and temple opening hours</p>
-            <p class="card-text tamil" data-lang="ta">தினசரி பூஜை நேரங்கள் மற்றும் கோயில் திறக்கும் நேரங்கள்</p>
+            <h3 class="card-title tamil">தரிசன நேரங்கள்</h3>
+            <p class="card-text tamil">தினசரி பூஜை நேரங்கள் மற்றும் கோயில் திறக்கும் நேரங்கள்</p>
           </div>
         </a>
         
@@ -814,11 +748,8 @@
             <div class="card-icon">🎉</div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-lang="en">Festivals</h3>
-            <h3 class="card-title tamil" data-lang="ta">திருவிழாக்கள்</h3>
-            
-            <p class="card-text" data-lang="en">Annual festivals, Brahmotsavam and special celebrations</p>
-            <p class="card-text tamil" data-lang="ta">வருடாந்திர உற்சவங்கள், பிரம்மோற்சவம் மற்றும் சிறப்பு விழாக்கள்</p>
+            <h3 class="card-title tamil">திருவிழாக்கள்</h3>
+            <p class="card-text tamil">வருடாந்திர உற்சவங்கள், பிரம்மோற்சவம் மற்றும் சிறப்பு விழாக்கள்</p>
           </div>
         </a>
         
@@ -827,11 +758,8 @@
             <div class="card-icon">📖</div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-lang="en">Ramanuja History</h3>
-            <h3 class="card-title tamil" data-lang="ta">ராமானுஜர் வரலாறு</h3>
-            
-            <p class="card-text" data-lang="en">Sacred connection of Thirukachchi Nambi and Ramanuja</p>
-            <p class="card-text tamil" data-lang="ta">இரண்டகல் நம்பி மற்றும் ராமானுஜரின் புனித தொடர்பு</p>
+            <h3 class="card-title tamil">ராமானுஜர் வரலாறு</h3>
+            <p class="card-text tamil">இரண்டகல் நம்பி மற்றும் ராமானுஜரின் புனித தொடர்பு</p>
           </div>
         </a>
         
@@ -840,11 +768,8 @@
             <div class="card-icon">🙏</div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-lang="en">Free Services</h3>
-            <h3 class="card-title tamil" data-lang="ta">இலவச சேவைகள்</h3>
-            
-            <p class="card-text" data-lang="en">Accommodation, food and facilities for devotees</p>
-            <p class="card-text tamil" data-lang="ta">தங்குமிடம், உணவு மற்றும் பக்தர்களுக்கான வசதிகள்</p>
+            <h3 class="card-title tamil">இலவச சேவைகள்</h3>
+            <p class="card-text tamil">தங்குமிடம், உணவு மற்றும் பக்தர்களுக்கான வசதிகள்</p>
           </div>
         </a>
         
@@ -853,11 +778,8 @@
             <div class="card-icon">📍</div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-lang="en">How to Reach</h3>
-            <h3 class="card-title tamil" data-lang="ta">வழிகாட்டி</h3>
-            
-            <p class="card-text" data-lang="en">Directions to temple and contact information</p>
-            <p class="card-text tamil" data-lang="ta">கோயிலுக்கு எப்படி வருவது, தொடர்பு தகவல்கள்</p>
+            <h3 class="card-title tamil">வழிகாட்டி</h3>
+            <p class="card-text tamil">கோயிலுக்கு எப்படி வருவது, தொடர்பு தகவல்கள்</p>
           </div>
         </a>
       </div>
@@ -869,22 +791,14 @@
     <div class="container">
       <div class="deity-content">
         <div class="deity-image">
-          <img src="./img/Sowmiyan.jpeg" alt="Sri Sowmiya Narayana Perumal">
+          <img src="./img/Sowmiyan.jpeg" alt="ஸ்ரீ சௌமிய நாராயண பெருமாள்">
         </div>
         
         <div class="deity-info">
-          <h2 data-lang="en">Sri Sowmiya Narayana Perumal</h2>
-          <h2 data-lang="ta" class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள்</h2>
+          <h2 class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள்</h2>
+          <h3 class="tamil">திருமகள் நாச்சியாருடன் சேர்ந்து எழுந்தருளியுள்ளார்</h3>
           
-          <h3 data-lang="en">With Thirumagal Nachiyar</h3>
-          <h3 data-lang="ta" class="tamil">திருமகள் நாச்சியாருடன் சேர்ந்து எழுந்தருளியுள்ளார்</h3>
-          
-          <p data-lang="en">
-            Thirukoshtiyur Divya Desam is one of the 108 Vaishnavite Divya Desams. 
-            The presiding deity Sri Sowmiya Narayana Perumal is in three postures - 
-            standing, sitting, and reclining.
-          </p>
-          <p data-lang="ta" class="tamil">
+          <p class="tamil">
             திருக்கோஷ்டியூர் திவ்ய தேசம் 108 வைணவ திவ்ய தேசங்களில் ஒன்றாகும். 
             இக்கோயிலின் மூலவர் ஸ்ரீ சௌமிய நாராயண பெருமாள் மூன்று நிலைகளில் 
             எழுந்தருளியுள்ளார் - நின்ற கோலம், அமர்ந்த கோலம், மற்றும் சயன கோலம்.
@@ -893,23 +807,19 @@
           <div class="features">
             <div class="feature-item">
               <div class="feature-icon">🎯</div>
-              <div class="feature-text" data-lang="en">Known as Southern Badrinath</div>
-              <div class="feature-text tamil" data-lang="ta">தென் பத்ரிநாத் என்று அழைக்கப்படுகிறது</div>
+              <div class="feature-text tamil">தென் பத்ரிநாத் என்று அழைக்கப்படுகிறது</div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">🏛️</div>
-              <div class="feature-text" data-lang="en">96 feet tall Ashtanga Vimanam</div>
-              <div class="feature-text tamil" data-lang="ta">96 அடி உயரம் கொண்ட அஷ்டாங்க விமானம்</div>
+              <div class="feature-text tamil">96 அடி உயரம் கொண்ட அஷ்டாங்க விமானம்</div>
             </div>
             <div class="feature-item">
               <div class="feature-icon">📿</div>
-              <div class="feature-text" data-lang="en">Ramanuja visited 18 times</div>
-              <div class="feature-text tamil" data-lang="ta">ராமானுஜர் 18 முறை வந்த புனித தலம்</div>
+              <div class="feature-text tamil">ராமானுஜர் 18 முறை வந்த புனித தலம்</div>
             </div>
           </div>
           
-          <a href="./pages/about.html" class="btn btn-primary" data-lang="en">Learn More</a>
-          <a href="./pages/about.html" class="btn btn-primary tamil" data-lang="ta">மேலும் அறிய</a>
+          <a href="./pages/about.html" class="btn btn-primary">மேலும் அறிய</a>
         </div>
       </div>
     </div>
@@ -918,30 +828,25 @@
   <!-- Contact CTA -->
   <section class="contact-cta">
     <div class="container">
-      <h2 data-lang="en">Contact Us</h2>
-      <h2 data-lang="ta" class="tamil">எங்களை தொடர்பு கொள்ளுங்கள்</h2>
-      
-      <p data-lang="en">For temple information, pooja bookings and inquiries</p>
-      <p data-lang="ta" class="tamil">கோயில் தகவல்கள், பூஜை முன்பதிவு மற்றும் விசாரணைகளுக்கு</p>
+      <h2 class="tamil">எங்களை தொடர்பு கொள்ளுங்கள்</h2>
+      <p class="tamil">கோயில் தகவல்கள், பூஜை முன்பதிவு மற்றும் விசாரணைகளுக்கு</p>
       
       <div class="contact-methods">
         <div class="contact-card">
           <div class="contact-card-icon">📞</div>
-          <h3 data-lang="en">Phone</h3>
-          <h3 data-lang="ta" class="tamil">தொலைபேசி</h3>
+          <h3 class="tamil">தொலைபேசி</h3>
           <a href="tel:+914575241233">04575-241233</a>
         </div>
         
         <div class="contact-card">
           <div class="contact-card-icon">📧</div>
-          <h3 data-lang="en">Email</h3>
-          <h3 data-lang="ta" class="tamil">மின்னஞ்சல்</h3>
+          <h3 class="tamil">மின்னஞ்சல்</h3>
           <a href="mailto:sowmiyan@sancharnet.in">sowmiyan@sancharnet.in</a>
         </div>
         
         <div class="contact-card">
           <div class="contact-card-icon">💬</div>
-          <h3>WhatsApp</h3>
+          <h3 class="tamil">WhatsApp</h3>
           <a href="https://wa.me/919047904690" target="_blank">+91 90479 04690</a>
         </div>
       </div>
@@ -952,71 +857,42 @@
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-section">
-        <h3 data-lang="en">Thirukoshtiyur</h3>
-        <h3 data-lang="ta" class="tamil">திருக்கோஷ்டியூர்</h3>
-        
-        <p data-lang="en">Sri Sowmiya Narayana Perumal Temple</p>
-        <p data-lang="ta" class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள் திருக்கோயில்</p>
-        
-        <p data-lang="en">One of 108 Divya Desams</p>
-        <p data-lang="ta" class="tamil">108 திவ்ய தேசங்களில் ஒன்று</p>
-        
-        <p style="margin-top: 1rem; font-weight: 600;" data-lang="en">|| Om Namo Narayanaya ||</p>
-        <p style="margin-top: 1rem; font-weight: 600;" data-lang="ta" class="tamil">|| ஓம் நமோ நாராயணாய ||</p>
+        <h3 class="tamil">திருக்கோஷ்டியூர்</h3>
+        <p class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள் திருக்கோயில்</p>
+        <p class="tamil">108 திவ்ய தேசங்களில் ஒன்று</p>
+        <p class="tamil" style="margin-top: 1rem; font-weight: 600;">|| ஓம் நமோ நாராயணாய ||</p>
       </div>
       
       <div class="footer-section">
-        <h3 data-lang="en">Quick Links</h3>
-        <h3 data-lang="ta" class="tamil">விரைவு இணைப்புகள்</h3>
-        
-        <a href="./pages/about.html" data-lang="en">About Temple</a>
-        <a href="./pages/about.html" data-lang="ta" class="tamil">கோயில் அறிமுகம்</a>
-        
-        <a href="./pages/history.html" data-lang="en">History</a>
-        <a href="./pages/history.html" data-lang="ta" class="tamil">வரலாறு</a>
-        
-        <a href="./pages/festivals.html" data-lang="en">Festivals</a>
-        <a href="./pages/festivals.html" data-lang="ta" class="tamil">திருவிழாக்கள்</a>
-        
-        <a href="./pages/timings.html" data-lang="en">Timings</a>
-        <a href="./pages/timings.html" data-lang="ta" class="tamil">நேரங்கள்</a>
+        <h3 class="tamil">விரைவு இணைப்புகள்</h3>
+        <a href="./pages/about.html" class="tamil">கோயில் அறிமுகம்</a>
+        <a href="./pages/history.html" class="tamil">வரலாறு</a>
+        <a href="./pages/festivals.html" class="tamil">திருவிழாக்கள்</a>
+        <a href="./pages/timings.html" class="tamil">நேரங்கள்</a>
       </div>
       
       <div class="footer-section">
-        <h3 data-lang="en">Timings</h3>
-        <h3 data-lang="ta" class="tamil">நேரங்கள்</h3>
-        
-        <p data-lang="en">Morning: 7:00 AM - 12:00 PM</p>
-        <p data-lang="ta" class="tamil">காலை: 7:00 AM - 12:00 PM</p>
-        
-        <p data-lang="en">Evening: 4:00 PM - 8:00 PM</p>
-        <p data-lang="ta" class="tamil">மாலை: 4:00 PM - 8:00 PM</p>
+        <h3 class="tamil">நேரங்கள்</h3>
+        <p class="tamil">காலை: 7:00 AM - 12:00 PM</p>
+        <p class="tamil">மாலை: 4:00 PM - 8:00 PM</p>
       </div>
       
       <div class="footer-section">
-        <h3 data-lang="en">Address</h3>
-        <h3 data-lang="ta" class="tamil">முகவரி</h3>
-        
-        <p data-lang="en">Thirukoshtiyur</p>
-        <p data-lang="ta" class="tamil">திருக்கோஷ்டியூர்</p>
-        
-        <p data-lang="en">Sivaganga District</p>
-        <p data-lang="ta" class="tamil">சிவகங்கை மாவட்டம்</p>
-        
-        <p data-lang="en">Tamil Nadu, India</p>
-        <p data-lang="ta" class="tamil">தமிழ்நாடு, இந்தியா</p>
+        <h3 class="tamil">முகவரி</h3>
+        <p class="tamil">திருக்கோஷ்டியூர்</p>
+        <p class="tamil">சிவகங்கை மாவட்டம்</p>
+        <p class="tamil">தமிழ்நாடு, இந்தியா</p>
       </div>
     </div>
     
     <div class="footer-bottom">
-      <p data-lang="en">© 2026 Thirukoshtiyur Temple. All rights reserved.</p>
-      <p data-lang="ta" class="tamil">© 2026 திருக்கோஷ்டியூர் கோயில். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+      <p class="tamil">© 2026 திருக்கோஷ்டியூர் கோயில். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
     </div>
   </footer>
 
   <!-- WhatsApp Float Button -->
   <div class="whatsapp-float">
-    <a href="https://wa.me/919047904690?text=Hello%2C%20I%20want%20to%20know%20more%20about%20Thirukoshtiyur%20Temple" target="_blank" aria-label="WhatsApp">
+    <a href="https://wa.me/919047904690?text=வணக்கம்%2C%20திருக்கோஷ்டியூர்%20கோயில்%20பற்றி%20மேலும்%20அறிய%20விரும்புகிறேன்" target="_blank" aria-label="WhatsApp">
       <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
       </svg>
@@ -1024,32 +900,6 @@
   </div>
 
   <script>
-    // Language Toggle Function
-    function toggleLanguage() {
-      const body = document.body;
-      const currentLang = body.classList.contains('tamil-mode') ? 'ta' : 'en';
-      
-      if (currentLang === 'en') {
-        body.classList.add('tamil-mode');
-        document.documentElement.lang = 'ta';
-        localStorage.setItem('preferred-language', 'ta');
-      } else {
-        body.classList.remove('tamil-mode');
-        document.documentElement.lang = 'en';
-        localStorage.setItem('preferred-language', 'en');
-      }
-    }
-    
-    // Load saved language preference (default to English)
-    window.addEventListener('DOMContentLoaded', () => {
-      const savedLang = localStorage.getItem('preferred-language');
-      // Default is English, so only switch if Tamil is saved
-      if (savedLang === 'ta') {
-        document.body.classList.add('tamil-mode');
-        document.documentElement.lang = 'ta';
-      }
-    });
-    
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
