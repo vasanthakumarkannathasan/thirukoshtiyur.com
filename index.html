@@ -1,1034 +1,925 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <!-- SEO Meta Tags -->
-  <title>Thirukoshtiyur Temple - Southern Badrinath | One of 108 Divya Desams</title>
-  <meta name="description" content="Official website of Arulmigu Sowmiya Narayana Perumal Temple, Thirukoshtiyur - One of 108 Divya Desams. Located in Sivagangai District, Tamil Nadu. Sacred Vishnu temple with rich history.">
-  <meta name="keywords" content="Thirukoshtiyur Temple, Sowmiya Narayana Perumal, Divya Desam, Tamil Nadu Temple, Sivagangai Temple, Vishnu Temple, Ramanuja, Southern Badrinath">
-  <meta name="author" content="Thirukoshtiyur Temple">
-  <meta name="robots" content="index, follow">
+  <title>திருக்கோஷ்டியூர் | ஸ்ரீ சௌமிய நாராயண பெருமாள் கோயில் | 108 திவ்ய தேசங்களில் ஒன்று</title>
+  <meta name="description" content="திருக்கோஷ்டியூர் ஸ்ரீ சௌமிய நாராயண பெருமாள் கோயில் - 108 திவ்ய தேசங்களில் ஒன்று. தென் பத்ரிநாத் என்று அழைக்கப்படும் இத்திருத்தலம்.">
+  <meta name="keywords" content="திருக்கோஷ்டியூர், சௌமிய நாராயண பெருமாள், திவ்ய தேசம், சிவகங்கை">
   
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://thirukoshtiyur.com/">
-  <meta property="og:title" content="Thirukoshtiyur Temple - Southern Badrinath">
-  <meta property="og:description" content="Arulmigu Sowmiya Narayana Perumal Temple - One of 108 Divya Desams">
-  <meta property="og:image" content="https://thirukoshtiyur.com/assets/images/temple-og.jpg">
+  <!-- Open Graph -->
+  <meta property="og:title" content="திருக்கோஷ்டியூர் - ஸ்ரீ சௌமிய நாராயண பெருமாள் கோயில்">
+  <meta property="og:description" content="108 திவ்ய தேசங்களில் ஒன்று - தென் பத்ரிநாத்">
+  <meta property="og:image" content="https://thirukoshtiyur.com/img/Sowmiyan.jpeg">
   
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Thirukoshtiyur Temple">
-  <meta name="twitter:description" content="Sacred Vishnu Temple - One of 108 Divya Desams">
-  
-  <!-- Canonical URL -->
-  <link rel="canonical" href="https://thirukoshtiyur.com/">
-  
-  <!-- Favicon - Sacred Namam Symbol -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="./assets/images/logo/favicon.svg">
-  <link rel="icon" type="image/png" href="./assets/images/logo/favicon.png">
   
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="./css/style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
   
-  <!-- Security Headers -->
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary: #C41E3A;
+      --primary-dark: #8B0000;
+      --secondary: #FF6B35;
+      --accent: #FFB703;
+      --gold: #D4AF37;
+      --peacock: #023047;
+      --cream: #FFF8F0;
+      --white: #FFFFFF;
+      --text: #1A1A1A;
+      --text-light: #4A4A4A;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    .tamil {
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    
+    /* Modern Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(196, 30, 58, 0.1);
+      z-index: 1000;
+      padding: 1rem 2rem;
+    }
+    
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+    }
+    
+    .logo img {
+      width: 50px;
+      height: 50px;
+      filter: drop-shadow(0 2px 8px rgba(196, 30, 58, 0.3));
+    }
+    
+    .logo-text h1 {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+    }
+    
+    .logo-text p {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+    
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.3s;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    
+    .nav-menu a:hover {
+      color: var(--primary);
+    }
+    
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: var(--primary);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    
+    /* Hero Section - Modern & Impressive */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #C41E3A 0%, #FF6B35 50%, #FFB703 100%);
+      overflow: hidden;
+      margin-top: 70px;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('./img/Sowmiyan.jpeg') center/cover no-repeat;
+      opacity: 0.2;
+      animation: kenburns 20s ease-in-out infinite;
+    }
+    
+    @keyframes kenburns {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: white;
+      max-width: 900px;
+      padding: 2rem;
+      z-index: 2;
+    }
+    
+    .hero-badge {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    
+    .hero h1 {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+      text-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+      margin-bottom: 1rem;
+      opacity: 0.95;
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem auto;
+      max-width: 400px;
+    }
+    
+    .hero-divider::before,
+    .hero-divider::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, white, transparent);
+    }
+    
+    .hero-divider img {
+      height: 60px;
+      filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.5));
+    }
+    
+    .hero-mantra {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: clamp(1.3rem, 2vw, 1.8rem);
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-bottom: 2.5rem;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    .hero-buttons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .btn {
+      padding: 1rem 2.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Noto Sans Tamil', sans-serif;
+    }
+    
+    .btn-primary {
+      background: white;
+      color: var(--primary);
+      box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(255, 255, 255, 0.5);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+    
+    .btn-outline:hover {
+      background: white;
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    /* Quick Links Section */
+    .quick-links {
+      padding: 4rem 2rem;
+      background: var(--cream);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .section-title {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .section-subtitle {
+      font-family: 'Noto Sans Tamil', serif;
+      color: var(--text-light);
+      font-size: 1.2rem;
+    }
+    
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(196, 30, 58, 0.1);
+      transition: all 0.3s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 50px rgba(196, 30, 58, 0.2);
+    }
+    
+    .card-image {
+      height: 200px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card-image::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('./assets/images/logo/namam.svg') center/80px no-repeat;
+      opacity: 0.1;
+    }
+    
+    .card-icon {
+      font-size: 4rem;
+      filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+    }
+    
+    .card-body {
+      padding: 2rem;
+    }
+    
+    .card-title {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .card-text {
+      font-family: 'Noto Sans Tamil', serif;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    
+    /* Deity Spotlight */
+    .deity-spotlight {
+      padding: 4rem 2rem;
+      background: white;
+    }
+    
+    .deity-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    
+    .deity-image {
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(196, 30, 58, 0.2);
+      position: relative;
+    }
+    
+    .deity-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s;
+    }
+    
+    .deity-image:hover img {
+      transform: scale(1.05);
+    }
+    
+    .deity-image::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(196, 30, 58, 0.1) 100%);
+      pointer-events: none;
+    }
+    
+    .deity-info h2 {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .deity-info h3 {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: 1.5rem;
+      color: var(--secondary);
+      margin-bottom: 2rem;
+    }
+    
+    .deity-info p {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+    }
+    
+    .features {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: var(--cream);
+      border-radius: 15px;
+    }
+    
+    .feature-icon {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    
+    .feature-text {
+      font-family: 'Noto Sans Tamil', serif;
+      color: var(--text);
+      font-weight: 600;
+    }
+    
+    /* Contact CTA */
+    .contact-cta {
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+    }
+    
+    .contact-cta h2 {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-cta p {
+      font-family: 'Noto Sans Tamil', serif;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    
+    .contact-methods {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+    
+    .contact-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 2rem;
+      min-width: 250px;
+      transition: all 0.3s;
+    }
+    
+    .contact-card:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-5px);
+    }
+    
+    .contact-card-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-card a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    
+    /* Footer */
+    .footer {
+      background: var(--peacock);
+      color: white;
+      padding: 3rem 2rem 1rem;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-section h3 {
+      font-family: 'Noto Sans Tamil', serif;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    .footer-section p,
+    .footer-section a {
+      font-family: 'Noto Sans Tamil', serif;
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      line-height: 2;
+      display: block;
+    }
+    
+    .footer-section a:hover {
+      color: var(--accent);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      font-family: 'Noto Sans Tamil', serif;
+    }
+    
+    /* WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 999;
+    }
+    
+    .whatsapp-float a {
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s;
+      animation: pulse 2s infinite;
+    }
+    
+    .whatsapp-float a:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+    }
+    
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 1rem;
+      }
+      
+      .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        flex-direction: column;
+        padding: 2rem;
+        transition: left 0.3s;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+      
+      .menu-toggle {
+        display: flex;
+      }
+      
+      .hero {
+        margin-top: 70px;
+        min-height: 500px;
+      }
+      
+      .deity-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .contact-methods {
+        flex-direction: column;
+      }
+      
+      .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+      }
+      
+      .whatsapp-float a {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Header -->
-  <header class="site-header">
-    <div class="header-container">
-      <!-- Logo -->
-      <a href="/" class="site-logo">
-        <img src="./assets/images/logo/namam.svg" alt="Sacred Namam - Thirukoshtiyur Temple Logo" class="logo-image">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo/namam.svg" alt="திருக்கோஷ்டியூர் சின்னம்">
         <div class="logo-text">
-          <span class="logo-title">Thirukoshtiyur Temple</span>
-          <span class="logo-subtitle">திருகோஷ்டியூர்</span>
+          <h1>திருக்கோஷ்டியூர்</h1>
+          <p>தென் பத்ரிநாத்</p>
         </div>
       </a>
       
-      <!-- Navigation -->
-      <nav class="main-nav">
-        <ul class="nav-menu">
-          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#history" class="nav-link">History</a></li>
-          <li class="nav-item"><a href="#deities" class="nav-link">Deities</a></li>
-          <li class="nav-item"><a href="#timings" class="nav-link">Timings</a></li>
-          <li class="nav-item"><a href="#festivals" class="nav-link">Festivals</a></li>
-          <li class="nav-item"><a href="./pages/gallery.html" class="nav-link">Gallery</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-        
-        <!-- Language Selector -->
-        <div class="language-selector">
-          <button class="lang-button active" data-lang="en" aria-label="English">EN</button>
-          <button class="lang-button" data-lang="ta" aria-label="Tamil">தமிழ்</button>
-        </div>
-      </nav>
+      <div class="menu-toggle" onclick="document.querySelector('.nav-menu').classList.toggle('active')">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       
-      <!-- Mobile Menu Toggle -->
-      <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <ul class="nav-menu">
+        <li><a href="/">முகப்பு</a></li>
+        <li><a href="./pages/about.html">கோயில் அறிமுகம்</a></li>
+        <li><a href="./pages/history.html">வரலாறு</a></li>
+        <li><a href="./pages/festivals.html">திருவிழாக்கள்</a></li>
+        <li><a href="./pages/timings.html">நேரங்கள்</a></li>
+        <li><a href="./pages/gallery.html">படத்தொகுப்பு</a></li>
+        <li><a href="./pages/contact.html">தொடர்பு</a></li>
+      </ul>
     </div>
-  </header>
-  
-  <!-- Mobile Overlay -->
-  <div class="mobile-overlay"></div>
-  
+  </nav>
+
   <!-- Hero Section -->
-  <section id="home" class="hero">
+  <section class="hero">
     <div class="hero-content">
-      <span class="hero-badge">One of 108 Divya Desams</span>
-      <h1 class="hero-title">Arulmigu Sowmiya Narayana Perumal Temple</h1>
-      <p class="hero-subtitle">Southern Badrinath - Thirukoshtiyur</p>
-      <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-lg); margin: var(--space-md) 0;">
-        <img src="./assets/images/logo/sangu-chakra.svg" alt="Sangu Chakra - Conch and Discus" style="height: 50px; opacity: 0.9;">
-      </div>
-      <p class="hero-mantra">|| ஓம் நமோ நாராயணாய ||</p>
-      <div class="hero-actions">
-        <a href="#about" class="btn btn-primary btn-lg">Explore Temple</a>
-        <a href="#timings" class="btn btn-outline-light btn-lg">Darshan Timings</a>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M12 5v14M19 12l-7 7-7-7"/>
-      </svg>
-    </div>
-  </section>
-  
-  <!-- Announcements Ticker -->
-  <div class="announcement-section">
-    <div class="announcement-container">
-      <div class="announcement-label">
-        <svg class="announcement-label-icon" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
-        </svg>
-        <span>Updates</span>
-      </div>
-      <div class="announcement-content">
-        <div class="announcement-track">
-          <div class="announcement-item">
-            <span class="announcement-icon">🔔</span>
-            <span class="announcement-text">Upcoming Brahmotsavam Festival - December 2026</span>
-          </div>
-          <div class="announcement-item">
-            <span class="announcement-icon">🛕</span>
-            <span class="announcement-text">Daily Poojas: Morning 7:00 AM - 12:00 PM | Evening 4:00 PM - 8:00 PM</span>
-          </div>
-          <div class="announcement-item">
-            <span class="announcement-icon">🙏</span>
-            <span class="announcement-text">Free Services: Accommodation, Food & Temple Information Available</span>
-          </div>
-          <div class="announcement-item">
-            <span class="announcement-icon">📍</span>
-            <span class="announcement-text">Located 25 km from Sivagangai | 30 km from Karaikudi | Tamil Nadu</span>
-          </div>
-          <div class="announcement-item">
-            <span class="announcement-icon">✨</span>
-            <span class="announcement-text">One of 108 Divya Desams - Sacred Vishnu Temple</span>
-          </div>
-          <!-- Duplicate for seamless scroll -->
-          <div class="announcement-item">
-            <span class="announcement-icon">🔔</span>
-            <span class="announcement-text">Upcoming Brahmotsavam Festival - December 2026</span>
-          </div>
-          <div class="announcement-item">
-            <span class="announcement-icon">🛕</span>
-            <span class="announcement-text">Daily Poojas: Morning 7:00 AM - 12:00 PM | Evening 4:00 PM - 8:00 PM</span>
-          </div>
-          <div class="announcement-item">
-            <span class="announcement-icon">🙏</span>
-            <span class="announcement-text">Free Services: Accommodation, Food & Temple Information Available</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- About Temple Section -->
-  <section id="about" class="bg-secondary">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">About Thirukoshtiyur Temple</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Sacred Abode of Lord Sowmiya Narayana Perumal</p>
+      <span class="hero-badge">108 திவ்ய தேசங்களில் ஒன்று</span>
+      <h1 class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள்</h1>
+      <p class="hero-subtitle tamil">திருக்கோஷ்டியூர் திருக்கோயில்</p>
+      
+      <div class="hero-divider">
+        <img src="./assets/images/logo/sangu-chakra.svg" alt="சங்கு சக்கரம்">
       </div>
       
-      <div class="grid grid-3 gap-xl">
-        <div class="icon-card">
-          <div class="icon-card-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-            </svg>
-          </div>
-          <h3 class="card-title">108 Divya Desam</h3>
-          <p class="card-text">One of the 108 sacred Vishnu temples praised in Nalayira Divya Prabandham</p>
-        </div>
-        
-        <div class="icon-card">
-          <div class="icon-card-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-            </svg>
-          </div>
-          <h3 class="card-title">Unique Architecture</h3>
-          <p class="card-text">96 feet high Ashtanga Vimanam with 8 multi-tiered towers</p>
-        </div>
-        
-        <div class="icon-card">
-          <div class="icon-card-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-            </svg>
-          </div>
-          <h3 class="card-title">Ramanuja's Legacy</h3>
-          <p class="card-text">Sacred place where Ramanuja learned the divine Ashtachara Mantram</p>
-        </div>
-      </div>
+      <p class="hero-mantra tamil">|| ஓம் நமோ நாராயணாய ||</p>
       
-      <div class="content-container mt-2xl">
-        <p style="text-align: center; font-size: var(--font-size-lg); line-height: 1.8; color: var(--text-secondary);">
-          The Arulmigu Sowmiya Narayana Perumal Temple at Thirukoshtiyur is one of the most revered shrines among the 108 Divya Desams. Known as the "Southern Badrinath," this ancient temple is famous for its unique architectural marvel where the deity appears in all three postures - <strong>standing, sitting, and sleeping</strong> - a rare phenomenon found in only a few temples worldwide.
-        </p>
-        <p style="text-align: center; font-size: var(--font-size-md); margin-top: var(--space-lg); color: var(--text-secondary);">
-          The temple holds immense significance in Sri Vaishnava tradition as the sacred place where Sri Ramanuja, after visiting 18 times, received the divine Ashtachara Mantram from Thirukoshtiyur Nambi and subsequently preached it to humanity from the temple tower.
-        </p>
+      <div class="hero-buttons">
+        <a href="./pages/about.html" class="btn btn-primary">கோயில் பற்றி அறிக</a>
+        <a href="./pages/contact.html" class="btn btn-outline">எங்களை தொடர்பு கொள்ளுங்கள்</a>
       </div>
     </div>
   </section>
-  
-  <!-- Temple Specialities Section -->
-  <section id="deities">
+
+  <!-- Quick Links -->
+  <section class="quick-links">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title">Temple Specialities</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Unique Features of the Divine Abode</p>
+        <h2 class="section-title tamil">விரைவு இணைப்புகள்</h2>
+        <p class="section-subtitle tamil">எங்கள் கோயில் சேவைகள் மற்றும் தகவல்கள்</p>
       </div>
       
-      <div class="grid grid-2 gap-xl">
-        <div class="card">
+      <div class="cards-grid">
+        <a href="./pages/about.html" class="card">
+          <div class="card-image">
+            <div class="card-icon">🛕</div>
+          </div>
           <div class="card-body">
-            <span class="card-badge">Main Deity</span>
-            <h3 class="card-title">Lord Sowmiya Narayana Perumal</h3>
-            <p class="card-text">
-              The presiding deity with divine consort Thirumagal Nachiyar blesses devotees in three divine postures across different levels of the temple - a unique architectural and spiritual marvel.
-            </p>
-            <ul style="list-style: none; padding: 0; margin-top: var(--space-lg);">
-              <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-color);">
-                <strong>Ground Level:</strong> Krishna in dancing posture (Boologam - Earth)
-              </li>
-              <li style="padding: var(--space-sm) 0; border-bottom: 1px solid var(--border-color);">
-                <strong>Middle Level:</strong> Sayana Thirukkolam - Narayana resting on Adi Sesha
-              </li>
-              <li style="padding: var(--space-sm) 0;">
-                <strong>Top Level:</strong> Sowmya Narayana Perumal in standing posture (Vaikundham)
-              </li>
-            </ul>
+            <h3 class="card-title tamil">கோயில் அறிமுகம்</h3>
+            <p class="card-text tamil">திருக்கோஷ்டியூர் கோயிலின் முழு வரலாறு, சிறப்புகள் மற்றும் முக்கியத்துவம்</p>
           </div>
-        </div>
+        </a>
         
-        <div class="card">
-          <div class="card-body">
-            <span class="card-badge">Spiritual Significance</span>
-            <h3 class="card-title">Divine Benefits</h3>
-            <p class="card-text">Devotees who worship at this sacred temple are blessed with:</p>
-            <ul style="list-style-type: '✓ '; padding-left: var(--space-lg); margin-top: var(--space-lg); line-height: 2;">
-              <li>Resolution of marriage hindrances</li>
-              <li>Blessings for progeny (children)</li>
-              <li>Success in business and career</li>
-              <li>Relief from health issues</li>
-              <li>Spiritual enlightenment and peace</li>
-            </ul>
-            <p class="card-text mt-lg" style="font-style: italic; color: var(--color-primary);">
-              Women worshipping with lamp (villaku) are blessed with good husband and children. The temple is also known as "Aayarpaadi" in Divya Prabandham.
-            </p>
+        <a href="./pages/timings.html" class="card">
+          <div class="card-image">
+            <div class="card-icon">⏰</div>
           </div>
-        </div>
+          <div class="card-body">
+            <h3 class="card-title tamil">தரிசன நேரங்கள்</h3>
+            <p class="card-text tamil">தினசரி பூஜை நேரங்கள் மற்றும் கோயில் திறக்கும் நேரங்கள்</p>
+          </div>
+        </a>
+        
+        <a href="./pages/festivals.html" class="card">
+          <div class="card-image">
+            <div class="card-icon">🎉</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title tamil">திருவிழாக்கள்</h3>
+            <p class="card-text tamil">வருடாந்திர உற்சவங்கள், பிரம்மோற்சவம் மற்றும் சிறப்பு விழாக்கள்</p>
+          </div>
+        </a>
+        
+        <a href="./pages/history.html" class="card">
+          <div class="card-image">
+            <div class="card-icon">📖</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title tamil">ராமானுஜர் வரலாறு</h3>
+            <p class="card-text tamil">இரண்டகல் நம்பி மற்றும் ராமானுஜரின் புனித தொடர்பு</p>
+          </div>
+        </a>
+        
+        <a href="./pages/services.html" class="card">
+          <div class="card-image">
+            <div class="card-icon">🙏</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title tamil">இலவச சேவைகள்</h3>
+            <p class="card-text tamil">தங்குமிடம், உணவு மற்றும் பக்தர்களுக்கான வசதிகள்</p>
+          </div>
+        </a>
+        
+        <a href="./pages/contact.html" class="card">
+          <div class="card-image">
+            <div class="card-icon">📍</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title tamil">வழிகாட்டி</h3>
+            <p class="card-text tamil">கோயிலுக்கு எப்படி வருவது, தொடர்பு தகவல்கள்</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
-  
-  <!-- History Section -->
-  <section id="history" class="bg-tertiary">
+
+  <!-- Deity Spotlight -->
+  <section class="deity-spotlight">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Temple History</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Ancient Legacy and Sacred Stories</p>
-      </div>
-      
-      <div class="grid grid-2 gap-2xl">
-        <div>
-          <h3 style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-primary); margin-bottom: var(--space-lg);">
-            Origin of Thirukoshtiyur
-          </h3>
-          <p style="line-height: 1.8; margin-bottom: var(--space-md);">
-            In ancient times, a powerful demon named <strong>Hiranyan</strong> terrorized sages, devas, and people across the realms. Kadambha Maharishi's Ashram became a safe refuge where rishis, yogis, and devas gathered seeking divine protection.
+      <div class="deity-content">
+        <div class="deity-image">
+          <img src="./img/Sowmiyan.jpeg" alt="ஸ்ரீ சௌமிய நாராயண பெருமாள்">
+        </div>
+        
+        <div class="deity-info">
+          <h2 class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள்</h2>
+          <h3 class="tamil">திருமகள் நாச்சியாருடன் சேர்ந்து எழுந்தருளியுள்ளார்</h3>
+          
+          <p class="tamil">
+            திருக்கோஷ்டியூர் திவ்ய தேசம் 108 வைணவ திவ்ய தேசங்களில் ஒன்றாகும். 
+            இக்கோயிலின் மூலவர் ஸ்ரீ சௌமிய நாராயண பெருமாள் மூன்று நிலைகளில் 
+            எழுந்தருளியுள்ளார் - நின்ற கோலம், அமர்ந்த கோலம், மற்றும் சயன கோலம்.
           </p>
-          <p style="line-height: 1.8; margin-bottom: var(--space-md);">
-            <strong>Lord Brahma and all devas</strong> assembled and discussed with <strong>Sriman Narayana</strong> at this sacred place. The Lord decided to incarnate as <strong>Narasimha</strong> (half-lion, half-human) to destroy the demon and restore dharma.
-          </p>
-          <p style="line-height: 1.8; font-weight: var(--font-weight-semibold); color: var(--color-primary);">
-            Since multiple deities gathered and discussed ("Goshti" = assembly) here, the place came to be known as <strong>"Goshtiyur"</strong> or <strong>"Thirukoshtiyur"</strong>.
-          </p>
+          
+          <div class="features">
+            <div class="feature-item">
+              <div class="feature-icon">🎯</div>
+              <div class="feature-text tamil">தென் பத்ரிநாத் என்று அழைக்கப்படுகிறது</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🏛️</div>
+              <div class="feature-text tamil">96 அடி உயரம் கொண்ட அஷ்டாங்க விமானம்</div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">📿</div>
+              <div class="feature-text tamil">ராமானுஜர் 18 முறை வந்த புனித தலம்</div>
+            </div>
+          </div>
+          
+          <a href="./pages/about.html" class="btn btn-primary">மேலும் அறிய</a>
         </div>
-        
-        <div>
-          <h3 style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-primary); margin-bottom: var(--space-lg);">
-            Ramanuja's Divine Connection
-          </h3>
-          <p style="line-height: 1.8; margin-bottom: var(--space-md);">
-            The temple gained immense significance when <strong>Sri Ramanuja</strong>, the great Vaishnavite Acharya, visited this temple <strong>18 times</strong> from Srirangam to learn the sacred <strong>Ashtachara Mantram</strong> ("Om Namo Narayanaya") from Thirukoshtiyur Nambi.
-          </p>
-          <p style="line-height: 1.8; margin-bottom: var(--space-md);">
-            Initially rejected 17 times, Ramanuja was finally accepted on his 18th visit when he showed true humility. After receiving the divine mantra, Nambi warned him not to preach it to others, lest he go to hell.
-          </p>
-          <p style="line-height: 1.8; font-weight: var(--font-weight-semibold); color: var(--color-primary);">
-            Choosing to sacrifice his own salvation for humanity's benefit, Ramanuja climbed the temple tower and <strong>preached the sacred mantra to all</strong>. Moved by this selfless act, Nambi blessed him, calling him <strong>"Emberumanar"</strong> (The Great Master).
-          </p>
-        </div>
-      </div>
-      
-      <div class="mt-2xl" style="text-align: center;">
-        <a href="./pages/history.html" class="btn btn-primary btn-lg">Read Complete History</a>
       </div>
     </div>
   </section>
-  
-  <!-- Darshan Timings & Poojas Section -->
-  <section id="timings">
+
+  <!-- Contact CTA -->
+  <section class="contact-cta">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Temple Timings & Poojas</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Daily Darshan and Pooja Schedule</p>
-      </div>
+      <h2 class="tamil">எங்களை தொடர்பு கொள்ளுங்கள்</h2>
+      <p class="tamil">கோயில் தகவல்கள், பூஜை முன்பதிவு மற்றும் விசாரணைகளுக்கு</p>
       
-      <div class="grid grid-2 gap-2xl">
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Temple Timings</h3>
-            <div style="margin-top: var(--space-lg);">
-              <div class="info-card">
-                <div class="info-card-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                  </svg>
-                </div>
-                <div class="info-card-content">
-                  <div class="info-card-title">Morning Session</div>
-                  <div class="info-card-text">7:00 AM - 12:00 PM</div>
-                </div>
-              </div>
-              <div class="info-card mt-md">
-                <div class="info-card-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
-                  </svg>
-                </div>
-                <div class="info-card-content">
-                  <div class="info-card-title">Evening Session</div>
-                  <div class="info-card-text">4:00 PM - 8:00 PM</div>
-                </div>
-              </div>
-              <p style="margin-top: var(--space-lg); font-size: var(--font-size-sm); color: var(--text-light); text-align: center;">
-                Temple closed for lunch: 12:00 PM - 4:00 PM
-              </p>
-            </div>
-          </div>
+      <div class="contact-methods">
+        <div class="contact-card">
+          <div class="contact-card-icon">📞</div>
+          <h3 class="tamil">தொலைபேசி</h3>
+          <a href="tel:+914575241233">04575-241233</a>
         </div>
         
-        <div class="card">
-          <div class="card-body">
-            <h3 class="card-title">Daily Poojas</h3>
-            <div style="margin-top: var(--space-lg);">
-              <ul style="list-style: none; padding: 0;">
-                <li style="padding: var(--space-md); background: var(--bg-secondary); margin-bottom: var(--space-sm); border-radius: var(--border-radius-md); display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-weight: var(--font-weight-semibold);">Visvarupam</span>
-                  <span style="color: var(--color-primary);">7:00 AM</span>
-                </li>
-                <li style="padding: var(--space-md); background: var(--bg-secondary); margin-bottom: var(--space-sm); border-radius: var(--border-radius-md); display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-weight: var(--font-weight-semibold);">Kalasandi</span>
-                  <span style="color: var(--color-primary);">8:00 AM</span>
-                </li>
-                <li style="padding: var(--space-md); background: var(--bg-secondary); margin-bottom: var(--space-sm); border-radius: var(--border-radius-md); display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-weight: var(--font-weight-semibold);">Uchikalam</span>
-                  <span style="color: var(--color-primary);">12:30 PM</span>
-                </li>
-                <li style="padding: var(--space-md); background: var(--bg-secondary); margin-bottom: var(--space-sm); border-radius: var(--border-radius-md); display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-weight: var(--font-weight-semibold);">Sathyaratcha</span>
-                  <span style="color: var(--color-primary);">5:00 PM</span>
-                </li>
-                <li style="padding: var(--space-md); background: var(--bg-secondary); border-radius: var(--border-radius-md); display: flex; justify-content: space-between; align-items: center;">
-                  <span style="font-weight: var(--font-weight-semibold);">Arthasamam</span>
-                  <span style="color: var(--color-primary);">8:00 PM</span>
-                </li>
-              </ul>
-              <p style="margin-top: var(--space-lg); font-size: var(--font-size-sm); color: var(--text-light); text-align: center;">
-                * Festival days may have modified timings
-              </p>
-            </div>
-          </div>
+        <div class="contact-card">
+          <div class="contact-card-icon">📧</div>
+          <h3 class="tamil">மின்னஞ்சல்</h3>
+          <a href="mailto:sowmiyan@sancharnet.in">sowmiyan@sancharnet.in</a>
+        </div>
+        
+        <div class="contact-card">
+          <div class="contact-card-icon">💬</div>
+          <h3 class="tamil">WhatsApp</h3>
+          <a href="https://wa.me/919047904690" target="_blank">+91 90479 04690</a>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- Festivals Section -->
-  <section id="festivals" class="bg-secondary">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Annual Festivals</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Year-Round Divine Celebrations</p>
-      </div>
-      
-      <div class="grid grid-4 gap-lg">
-        <div class="card">
-          <div class="card-body">
-            <span class="card-badge">January</span>
-            <h4 class="card-title" style="font-size: var(--font-size-base);">Thirukalyana Utsavam</h4>
-            <p class="card-text" style="font-size: var(--font-size-sm);">Celestial marriage ceremony of the Lord</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <span class="card-badge">February</span>
-            <h4 class="card-title" style="font-size: var(--font-size-base);">Teppa Utsavam</h4>
-            <p class="card-text" style="font-size: var(--font-size-sm);">Float festival in the temple tank</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <span class="card-badge">March</span>
-            <h4 class="card-title" style="font-size: var(--font-size-base);">Panguni Utsavam</h4>
-            <p class="card-text" style="font-size: var(--font-size-sm);">Grand spring festival celebration</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <span class="card-badge">April</span>
-            <h4 class="card-title" style="font-size: var(--font-size-base);">Hanuman Jayanthi</h4>
-            <p class="card-text" style="font-size: var(--font-size-sm);">Lord Hanuman's birthday celebration</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <span class="card-badge">August</span>
-            <h4 class="card-title" style="font-size: var(--font-size-base);">Krishna Jayanthi</h4>
-            <p class="card-text" style="font-size: var(--font-size-sm);">Lord Krishna's birthday celebration</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <span class="card-badge">September</span>
-            <h4 class="card-title" style="font-size: var(--font-size-base);">Navarathiri</h4>
-            <p class="card-text" style="font-size: var(--font-size-sm);">Nine nights of devotional celebrations</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <span class="card-badge">November</span>
-            <h4 class="card-title" style="font-size: var(--font-size-base);">Karthigai Deepam</h4>
-            <p class="card-text" style="font-size: var(--font-size-sm);">Festival of lights celebration</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <span class="card-badge">December</span>
-            <h4 class="card-title" style="font-size: var(--font-size-base);">Adhyayana Utsavam</h4>
-            <p class="card-text" style="font-size: var(--font-size-sm);">Scripture recitation festival</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="mt-2xl" style="text-align: center;">
-        <a href="./pages/festivals.html" class="btn btn-primary btn-lg">View Full Festival Calendar</a>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Services Section -->
-  <section id="services">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Free Services for Devotees</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Sri Sowmiya Narayanan Emperumal Charitable Trust</p>
-      </div>
-      
-      <div class="grid grid-3 gap-xl">
-        <div class="icon-card">
-          <div class="icon-card-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3z"/>
-            </svg>
-          </div>
-          <h3 class="card-title">Free Accommodation</h3>
-          <p class="card-text">Comfortable lodging facilities available for devotees visiting the temple</p>
-        </div>
-        
-        <div class="icon-card">
-          <div class="icon-card-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
-            </svg>
-          </div>
-          <h3 class="card-title">Annathanam (Free Food)</h3>
-          <p class="card-text">Complimentary meals provided to all devotees with love and devotion</p>
-        </div>
-        
-        <div class="icon-card">
-          <div class="icon-card-icon">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M11 17h2v-6h-2v6zm1-15C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM11 9h2V7h-2v2z"/>
-            </svg>
-          </div>
-          <h3 class="card-title">Temple Information</h3>
-          <p class="card-text">Complete guidance and information about temple rituals and traditions</p>
-        </div>
-      </div>
-      
-      <div class="mt-2xl" style="background: var(--bg-tertiary); padding: var(--space-2xl); border-radius: var(--border-radius-lg); text-align: center;">
-        <h3 style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-primary); margin-bottom: var(--space-lg);">
-          Community Welfare Initiatives
-        </h3>
-        <p style="max-width: 800px; margin: 0 auto var(--space-lg); line-height: 1.8;">
-          The trust also extends support through drinking water facilities, village electricity projects, education development for poor children, village infrastructure improvement, and medical assistance to those in need.
-        </p>
-        <p style="font-size: var(--font-size-sm); color: var(--text-light);">
-          For more information, contact: <strong>Mr. Babu Samy - 9047904690</strong>
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Deity Gallery & Instagram Section -->
-  <section id="gallery" class="bg-secondary">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Divine Glimpses</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Sacred Darshan of Lord Sowmiya Narayana Perumal</p>
-      </div>
-      
-      <!-- Instagram Link Card -->
-      <div class="card" style="max-width: 800px; margin: 0 auto var(--space-3xl); text-align: center; background: linear-gradient(135deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white;">
-        <div class="card-body">
-          <div style="display: flex; align-items: center; justify-content: center; gap: var(--space-md); margin-bottom: var(--space-lg);">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 40px; height: 40px;">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            <h3 style="font-size: var(--font-size-2xl); margin: 0;">Follow Our Temple</h3>
-          </div>
-          <p style="font-size: var(--font-size-lg); margin-bottom: var(--space-xl); opacity: 0.95;">
-            View daily darshan, festival celebrations, and divine moments from Thirukoshtiyur Temple on Instagram
-          </p>
-          <a href="https://www.instagram.com/thirukoshtiyur_asvr_madhavan_/" 
-             target="_blank" 
-             rel="noopener noreferrer"
-             class="btn btn-lg"
-             style="background: white; color: #bc1888; border: none; font-weight: 600; padding: var(--space-md) var(--space-2xl); display: inline-flex; align-items: center; gap: var(--space-sm);">
-            <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px;">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            @thirukoshtiyur_asvr_madhavan_
-          </a>
-          <p style="margin-top: var(--space-lg); font-size: var(--font-size-sm); opacity: 0.85;">
-            🙏 121 Followers • Daily Updates • Festival Coverage
-          </p>
-        </div>
-      </div>
-      
-      <!-- Placeholder for Deity Images -->
-      <div class="section-header" style="margin-top: var(--space-3xl);">
-        <h3 class="section-title" style="font-size: var(--font-size-xl);">Sacred Deity Images</h3>
-        <p class="section-subtitle">To view beautiful images of Lord Sowmiya Narayana Perumal, please visit our Instagram page</p>
-      </div>
-      
-      <!-- Image Grid Placeholders -->
-      <div class="grid grid-3 gap-xl">
-        <div class="card">
-          <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); display: flex; align-items: center; justify-content: center; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
-            <div style="text-align: center; color: white; padding: var(--space-xl);">
-              <svg viewBox="0 0 24 24" fill="currentColor" style="width: 60px; height: 60px; margin-bottom: var(--space-md); opacity: 0.8;">
-                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3z"/>
-              </svg>
-              <p style="font-size: var(--font-size-md); font-weight: 600;">Lord Sowmiya Narayana</p>
-              <p style="font-size: var(--font-size-sm); opacity: 0.9; margin-top: var(--space-sm);">Standing Posture</p>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-text" style="text-align: center;">
-              Main deity in standing posture blessing devotees with divine grace
-            </p>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%); display: flex; align-items: center; justify-content: center; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
-            <div style="text-align: center; color: white; padding: var(--space-xl);">
-              <svg viewBox="0 0 24 24" fill="currentColor" style="width: 60px; height: 60px; margin-bottom: var(--space-md); opacity: 0.8;">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-              </svg>
-              <p style="font-size: var(--font-size-md); font-weight: 600;">Sayana Thirukkolam</p>
-              <p style="font-size: var(--font-size-sm); opacity: 0.9; margin-top: var(--space-sm);">Reclining Posture</p>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-text" style="text-align: center;">
-              Lord Narayana resting on Adi Sesha in cosmic meditation
-            </p>
-          </div>
-        </div>
-        
-        <div class="card">
-          <div style="aspect-ratio: 4/3; background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-gold) 100%); display: flex; align-items: center; justify-content: center; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;">
-            <div style="text-align: center; color: white; padding: var(--space-xl);">
-              <svg viewBox="0 0 24 24" fill="currentColor" style="width: 60px; height: 60px; margin-bottom: var(--space-md); opacity: 0.8;">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-              </svg>
-              <p style="font-size: var(--font-size-md); font-weight: 600;">Krishna Dancing</p>
-              <p style="font-size: var(--font-size-sm); opacity: 0.9; margin-top: var(--space-sm);">Ground Level</p>
-            </div>
-          </div>
-          <div class="card-body">
-            <p class="card-text" style="text-align: center;">
-              Lord Krishna in divine dancing posture representing Boologam
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Image Instructions -->
-      <div class="mt-2xl" style="background: var(--bg-tertiary); padding: var(--space-2xl); border-radius: var(--border-radius-lg); text-align: center;">
-        <h4 style="font-family: var(--font-heading); font-size: var(--font-size-lg); color: var(--color-primary); margin-bottom: var(--space-md);">
-          📸 Want to Add Deity Images?
-        </h4>
-        <p style="max-width: 700px; margin: 0 auto; line-height: 1.8; color: var(--text-secondary);">
-          To add actual deity images from Instagram to this website, please download the images from 
-          <a href="https://www.instagram.com/thirukoshtiyur_asvr_madhavan_/" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 600;">@thirukoshtiyur_asvr_madhavan_</a> 
-          with proper permissions and save them to the <code style="background: var(--color-bg); padding: 2px 8px; border-radius: 4px;">assets/images/deities/</code> folder.
-        </p>
-        <p style="margin-top: var(--space-md); font-size: var(--font-size-sm); color: var(--text-light);">
-          Recommended: Contact the Instagram account owner for high-resolution images and proper permissions.
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Location & Contact Section -->
-  <section id="contact" class="bg-secondary"
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Visit Us</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">Plan Your Divine Journey</p>
-      </div>
-      
-      <div class="grid grid-2 gap-2xl">
-        <div>
-          <h3 style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-primary); margin-bottom: var(--space-lg);">
-            Temple Location
-          </h3>
-          
-          <div class="info-card mb-lg">
-            <div class="info-card-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-            </div>
-            <div class="info-card-content">
-              <div class="info-card-title">Address</div>
-              <div class="info-card-text">
-                Thirukoshtiyur, Sivagangai District,<br>
-                Tamil Nadu, India
-              </div>
-            </div>
-          </div>
-          
-          <div class="info-card mb-lg">
-            <div class="info-card-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-              </svg>
-            </div>
-            <div class="info-card-content">
-              <div class="info-card-title">Contact</div>
-              <div class="info-card-text">
-                Phone: 04575-241233<br>
-                Email: sowmiyan@sancharnet.in
-              </div>
-            </div>
-          </div>
-          
-          <div class="info-card">
-            <div class="info-card-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
-              </svg>
-            </div>
-            <div class="info-card-content">
-              <div class="info-card-title">Administrative Office</div>
-              <div class="info-card-text">
-                Sivagangai Samasthanam Devasthanam<br>
-                Sivagangai - 630 561, Tamil Nadu
-              </div>
-            </div>
-          </div>
-          
-          <div class="mt-xl">
-            <h4 style="font-weight: var(--font-weight-semibold); margin-bottom: var(--space-md);">Distance from Major Cities:</h4>
-            <ul style="list-style: none; padding: 0;">
-              <li style="padding: var(--space-sm) 0; display: flex; justify-content: space-between;">
-                <span>Sivagangai</span>
-                <strong>25 km</strong>
-              </li>
-              <li style="padding: var(--space-sm) 0; display: flex; justify-content: space-between;">
-                <span>Karaikudi</span>
-                <strong>30 km</strong>
-              </li>
-              <li style="padding: var(--space-sm) 0; display: flex; justify-content: space-between;">
-                <span>Thiruppathur</span>
-                <strong>10 km</strong>
-              </li>
-            </ul>
-          </div>
-        </div>
-        
-        <div>
-          <h3 style="font-family: var(--font-heading); font-size: var(--font-size-xl); color: var(--color-primary); margin-bottom: var(--space-lg);">
-            How to Reach
-          </h3>
-          
-          <div class="card mb-lg">
-            <div class="card-body">
-              <h4 style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
-                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; color: var(--color-primary);">
-                  <path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/>
-                </svg>
-                By Bus
-              </h4>
-              <p style="font-size: var(--font-size-sm); line-height: 1.7;">
-                Regular bus services available from Sivagangai, Thiruppathur, Karaikudi, Madurai, and Trichy. Buses run every 10-15 minutes from nearby towns.
-              </p>
-            </div>
-          </div>
-          
-          <div class="card mb-lg">
-            <div class="card-body">
-              <h4 style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
-                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; color: var(--color-primary);">
-                  <path d="M4 15.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V5c0-3.5-3.58-4-8-4s-8 .5-8 4v10.5zm8 1.5c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm6-7H6V5h12v5z"/>
-                </svg>
-                By Train
-              </h4>
-              <p style="font-size: var(--font-size-sm); line-height: 1.7;">
-                Nearest railway stations: <strong>Karaikudi</strong> (closest), <strong>Sivagangai</strong>, and <strong>Madurai</strong>. From stations, take connecting buses to Thirukoshtiyur.
-              </p>
-            </div>
-          </div>
-          
-          <div class="card">
-            <div class="card-body">
-              <h4 style="display: flex; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-md);">
-                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 24px; height: 24px; color: var(--color-primary);">
-                  <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                </svg>
-                By Air
-              </h4>
-              <p style="font-size: var(--font-size-sm); line-height: 1.7;">
-                Nearest airports: <strong>Trichy Airport</strong> (closest, ~80 km) and <strong>Madurai Airport</strong> (~100 km). Hire taxis or take buses from airports.
-              </p>
-            </div>
-          </div>
-          
-          <div class="mt-xl" style="text-align: center;">
-            <a href="./pages/how-to-reach.html" class="btn btn-primary">Detailed Travel Guide</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Visitor Comments Form Section -->
-  <section id="visitor-comments" class="contact-form-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Share Your Experience</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle">We value your feedback and blessings</p>
-      </div>
-      
-      <div class="contact-form-container">
-        <!-- Form Message (Success/Error) -->
-        <div id="formMessage" class="form-message"></div>
-        
-        <!-- Contact Form -->
-        <form id="visitorForm" class="contact-form" method="POST">
-          <!-- Honeypot for spam protection -->
-          <input type="text" name="_gotcha" style="display:none">
-          
-          <div class="form-group">
-            <label for="name" class="form-label">
-              Your Name <span class="form-label-required">*</span>
-            </label>
-            <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              class="form-input" 
-              placeholder="Enter your full name"
-              required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email" class="form-label">
-              Email Address <span class="form-label-required">*</span>
-            </label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              class="form-input" 
-              placeholder="your.email@example.com"
-              required>
-          </div>
-          
-          <div class="form-group">
-            <label for="phone" class="form-label">
-              Phone Number
-            </label>
-            <input 
-              type="tel" 
-              id="phone" 
-              name="phone" 
-              class="form-input" 
-              placeholder="+91 98765 43210">
-          </div>
-          
-          <div class="form-group">
-            <label for="city" class="form-label">
-              City/Location
-            </label>
-            <input 
-              type="text" 
-              id="city" 
-              name="city" 
-              class="form-input" 
-              placeholder="Your city or location">
-          </div>
-          
-          <div class="form-group">
-            <label for="visitDate" class="form-label">
-              Date of Visit
-            </label>
-            <input 
-              type="date" 
-              id="visitDate" 
-              name="visitDate" 
-              class="form-input">
-          </div>
-          
-          <div class="form-group">
-            <label for="message" class="form-label">
-              Your Message / Feedback <span class="form-label-required">*</span>
-            </label>
-            <textarea 
-              id="message" 
-              name="message" 
-              class="form-textarea" 
-              placeholder="Share your experience, blessings, or suggestions about your visit to Thirukoshtiyur Temple..."
-              required></textarea>
-            <p class="form-helper">Please share your darshan experience, suggestions, or any queries.</p>
-          </div>
-          
-          <button type="submit" class="btn btn-primary btn-lg form-submit-btn" id="submitBtn">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-            </svg>
-            Send Message
-          </button>
-        </form>
-        
-        <!-- Contact Information Cards -->
-        <div class="contact-info-cards">
-          <div class="contact-info-card">
-            <div class="contact-info-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-              </svg>
-            </div>
-            <div class="contact-info-title">Phone</div>
-            <div class="contact-info-text">
-              <a href="tel:+914575241233" class="contact-info-link">04575-241233</a>
-            </div>
-          </div>
-          
-          <div class="contact-info-card">
-            <div class="contact-info-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-              </svg>
-            </div>
-            <div class="contact-info-title">Email</div>
-            <div class="contact-info-text">
-              <a href="mailto:sowmiyan@sancharnet.in" class="contact-info-link">sowmiyan@sancharnet.in</a>
-            </div>
-          </div>
-          
-          <div class="contact-info-card">
-            <div class="contact-info-icon">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-              </svg>
-            </div>
-            <div class="contact-info-title">WhatsApp</div>
-            <div class="contact-info-text">
-              <a href="https://wa.me/919047904690" target="_blank" rel="noopener" class="contact-info-link">+91 90479 04690</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
+
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="footer-main">
-      <!-- About Column -->
-      <div class="footer-about">
-        <div class="footer-logo">
-          <img src="./assets/images/logo/namam.svg" alt="Sacred Namam - Temple Logo" class="footer-logo-image">
-          <span class="footer-logo-text">Thirukoshtiyur</span>
-        </div>
-        <p class="footer-description">
-          Arulmigu Sowmiya Narayana Perumal Temple - One of the 108 sacred Divya Desams. Known as the "Southern Badrinath," this ancient temple has been a beacon of devotion for centuries.
-        </p>
-        <p class="footer-mantra">|| ஓம் நமோ நாராயணாய ||</p>
-        
-        <div class="footer-social">
-          <a href="#" class="footer-social-link" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-            </svg>
-          </a>
-          <a href="#" class="footer-social-link" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-            </svg>
-          </a>
-          <a href="#" class="footer-social-link" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-        </div>
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 class="tamil">திருக்கோஷ்டியூர்</h3>
+        <p class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள் திருக்கோயில்</p>
+        <p class="tamil">108 திவ்ய தேசங்களில் ஒன்று</p>
+        <p class="tamil" style="margin-top: 1rem; font-weight: 600;">|| ஓம் நமோ நாராயணாய ||</p>
       </div>
       
-      <!-- Quick Links Column -->
-      <div>
-        <h3 class="footer-section-title">Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="#about">About Temple</a></li>
-          <li><a href="./pages/history.html">Temple History</a></li>
-          <li><a href="./pages/ramanujar.html">Ramanuja's Story</a></li>
-          <li><a href="#deities">Deities</a></li>
-          <li><a href="./pages/architecture.html">Temple Architecture</a></li>
-          <li><a href="./pages/nearby-temples.html">Nearby Temples</a></li>
-        </ul>
+      <div class="footer-section">
+        <h3 class="tamil">விரைவு இணைப்புகள்</h3>
+        <a href="./pages/about.html" class="tamil">கோயில் அறிமுகம்</a>
+        <a href="./pages/history.html" class="tamil">வரலாறு</a>
+        <a href="./pages/festivals.html" class="tamil">திருவிழாக்கள்</a>
+        <a href="./pages/timings.html" class="tamil">நேரங்கள்</a>
       </div>
       
-      <!-- Services Column -->
-      <div>
-        <h3 class="footer-section-title">Visitor Info</h3>
-        <ul class="footer-links">
-          <li><a href="#timings">Darshan Timings</a></li>
-          <li><a href="./pages/timings.html">Daily Poojas</a></li>
-          <li><a href="./pages/festivals.html">Festival Calendar</a></li>
-          <li><a href="./pages/how-to-reach.html">How to Reach</a></li>
-          <li><a href="#services">Free Services</a></li>
-          <li><a href="./pages/gallery.html">Photo Gallery</a></li>
-        </ul>
+      <div class="footer-section">
+        <h3 class="tamil">நேரங்கள்</h3>
+        <p class="tamil">காலை: 7:00 AM - 12:00 PM</p>
+        <p class="tamil">மாலை: 4:00 PM - 8:00 PM</p>
       </div>
       
-      <!-- Contact & Timings Column -->
-      <div>
-        <h3 class="footer-section-title">Temple Timings</h3>
-        <div class="footer-timings">
-          <div class="footer-timing-item">
-            <span class="footer-timing-label">Morning:</span>
-            <span class="footer-timing-value">7:00 AM - 12:00 PM</span>
-          </div>
-          <div class="footer-timing-item">
-            <span class="footer-timing-label">Evening:</span>
-            <span class="footer-timing-value">4:00 PM - 8:00 PM</span>
-          </div>
-        </div>
-        
-        <div class="footer-contact-item" style="margin-top: var(--space-xl);">
-          <svg class="footer-contact-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-          </svg>
-          <div class="footer-contact-content">
-            <p class="footer-contact-text">
-              Thirukoshtiyur, Sivagangai District<br>
-              Tamil Nadu, India
-            </p>
-          </div>
-        </div>
+      <div class="footer-section">
+        <h3 class="tamil">முகவரி</h3>
+        <p class="tamil">திருக்கோஷ்டியூர்</p>
+        <p class="tamil">சிவகங்கை மாவட்டம்</p>
+        <p class="tamil">தமிழ்நாடு, இந்தியா</p>
       </div>
     </div>
     
-    <!-- Footer Bottom -->
     <div class="footer-bottom">
-      <div class="footer-bottom-content">
-        <p class="footer-copyright">
-          © <span class="copyright-year">2026</span> Thirukoshtiyur Temple. All Rights Reserved.
-        </p>
-        <ul class="footer-bottom-links">
-          <li><a href="./pages/privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="./pages/terms.html">Terms of Use</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </div>
+      <p class="tamil">© 2026 திருக்கோஷ்டியூர் கோயில். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
     </div>
   </footer>
-  
-  <!-- WhatsApp Floating Button -->
+
+  <!-- WhatsApp Float Button -->
   <div class="whatsapp-float">
-    <a href="https://wa.me/919047904690?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20Thirukoshtiyur%20Temple" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       class="whatsapp-button"
-       aria-label="Chat on WhatsApp">
-      <svg viewBox="0 0 24 24">
+    <a href="https://wa.me/919047904690?text=வணக்கம்%2C%20திருக்கோஷ்டியூர்%20கோயில்%20பற்றி%20மேலும்%20அறிய%20விரும்புகிறேன்" target="_blank" aria-label="WhatsApp">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
         <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
       </svg>
     </a>
-    <div class="whatsapp-tooltip">Chat with us on WhatsApp</div>
   </div>
-  
-  <!-- JavaScript -->
-  <script type="module" src="./js/main.js"></script>
-  <script type="module" src="./js/navigation.js"></script>
-  <script type="module" src="./js/announcement-ticker.js"></script>
-  <script type="module" src="./js/contact-form.js"></script>
-  
-  <!-- Cloudflare Web Analytics -->
-  <!-- <script defer src='https://static.cloudflare.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN_HERE"}'></script> -->
-  
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    // Navbar background on scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.style.boxShadow = '0 2px 30px rgba(196, 30, 58, 0.15)';
+      } else {
+        navbar.style.boxShadow = '0 2px 20px rgba(196, 30, 58, 0.1)';
+      }
+    });
+  </script>
 </body>
 </html>
