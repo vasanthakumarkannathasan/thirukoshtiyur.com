@@ -15,8 +15,11 @@
     [data-lang]:not([data-lang="en"]) { display: none; }
     body.tamil-mode [data-lang="en"] { display: none; }
     body.tamil-mode [data-lang="ta"] { display: block; }
-    .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(196,30,58,0.1); z-index: 1000; padding: 1rem 1.5rem; }
-    .nav-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    /* Professional Master Container */
+    .content-container { max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 2rem; }
+    
+    .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(196,30,58,0.1); z-index: 1000; padding: 1rem 0; }
+    .nav-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
     .logo { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
     .logo img { width: 50px; height: 50px; }
     .logo-text h1 { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
@@ -33,8 +36,8 @@
     .notification-item { display: inline-flex; align-items: center; padding: 0 3rem; font-weight: 600; }
     .notification-icon { margin-right: 0.8rem; font-size: 1.3rem; }
     @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .main-content { margin-top: 120px; padding: 4rem 2rem; min-height: calc(100vh - 400px); }
-    .container { max-width: 1200px; margin: 0 auto; }
+    .main-content { margin-top: 120px; padding: 4rem 0; min-height: calc(100vh - 400px); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
     .page-header { text-align: center; margin-bottom: 3rem; }
     .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; color: var(--primary); margin-bottom: 1rem; line-height: 1.2; }
     .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -46,8 +49,8 @@
     .contact-info a:hover { color: var(--primary); }
     .map-section { margin-top: 2rem; background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 8px 30px rgba(196,30,58,0.1); }
     .map-title { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem; text-align: center; }
-    .footer { background: var(--peacock); color: white; padding: 3rem 2rem 1rem; }
-    .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
+    .footer { background: var(--peacock); color: white; padding: 3rem 0 1rem; }
+    .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
     .footer-section h3 { margin-bottom: 1rem; }
     .footer-section p, .footer-section a { color: rgba(255,255,255,0.8); text-decoration: none; line-height: 2; display: block; }
     .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
@@ -161,7 +164,7 @@
       <div class="map-section">
         <h2 class="map-title" data-lang="en">How to Reach</h2>
         <h2 class="map-title tamil" data-lang="ta">எப்படி வருவது</h2>
-        <div class="contact-info" style="max-width: 800px; margin: 0 auto;">
+        <div class="contact-info">
           <p data-lang="en"><strong>By Road:</strong> Well connected by road from Madurai (55 km), Sivaganga (25 km)</p>
           <p data-lang="ta" class="tamil"><strong>சாலை வழியாக:</strong> மதுரை (55 கி.மீ), சிவகங்கை (25 கி.மீ) நகரங்களிலிருந்து நல்ல சாலை வசதி</p>
           
