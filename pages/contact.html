@@ -8,8 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     :root { --primary: #C41E3A; --secondary: #FF6B35; --accent: #FFB703; --peacock: #023047; --cream: #FFF8F0; --text: #1A1A1A; --text-light: #4A4A4A; }
-    body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--cream); overflow-x: hidden; min-height: 100vh; }
     .tamil { font-family: 'Noto Sans Tamil', sans-serif; }
     [data-lang]:not([data-lang="en"]) { display: none; }
     body.tamil-mode [data-lang="en"] { display: none; }
@@ -24,15 +25,15 @@
     .nav-menu { display: flex; gap: 2rem; list-style: none; }
     .nav-menu a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
     .nav-menu a:hover { color: var(--primary); }
-    .lang-switcher { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: white; padding: 0.6rem 1.2rem; border-radius: 25px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
-    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
+    .lang-switcher { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: white; padding: 0.6rem 1.2rem; border-radius: 25px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(196,30,58,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; white-space: nowrap; }
+    .lang-switcher:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,30,58,0.4); }
     .menu-toggle span { width: 25px; height: 3px; background: var(--primary); border-radius: 2px; }
     .notification-banner { position: fixed; top: 70px; left: 0; right: 0; background: linear-gradient(90deg, var(--secondary), var(--accent)); color: white; padding: 0.8rem 0; z-index: 999; overflow: hidden; }
     .notification-content { display: flex; white-space: nowrap; animation: scroll-left 30s linear infinite; }
     .notification-item { display: inline-flex; align-items: center; padding: 0 3rem; font-weight: 600; }
     .notification-icon { margin-right: 0.8rem; font-size: 1.3rem; }
     @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .main-content { margin-top: 120px; padding: 4rem 2rem; min-height: calc(100vh - 400px); background: var(--cream); }
+    .main-content { margin-top: 120px; padding: 4rem 2rem; min-height: calc(100vh - 400px); }
     .container { max-width: 1200px; margin: 0 auto; }
     .page-header { text-align: center; margin-bottom: 3rem; }
     .page-title { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--primary); margin-bottom: 1rem; }
