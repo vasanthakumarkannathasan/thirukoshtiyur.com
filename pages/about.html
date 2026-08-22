@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Temple | Sri Sowmiya Narayana Perumal Temple</title>
+  <title>About | Sri Sowmiya Narayana Perumal Temple</title>
   <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
     :root {
       --primary: #C41E3A;
       --secondary: #FF6B35;
@@ -17,25 +18,28 @@
       --text: #1A1A1A;
       --text-light: #4A4A4A;
     }
-    body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--cream); overflow-x: hidden; min-height: 100vh; }
     .tamil { font-family: 'Noto Sans Tamil', sans-serif; }
     [data-lang]:not([data-lang="en"]) { display: none; }
     body.tamil-mode [data-lang="en"] { display: none; }
     body.tamil-mode [data-lang="ta"] { display: block; }
     
+    /* Professional Master Container */
+    .content-container { max-width: 1200px; margin: 0 auto; width: 100%; padding: 0 2rem; }
+    
     /* Navbar */
-    .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(196,30,58,0.1); z-index: 1000; padding: 1rem 2rem; }
-    .nav-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(196,30,58,0.1); z-index: 1000; padding: 1rem 0; }
+    .nav-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
     .logo { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
     .logo img { width: 50px; height: 50px; }
     .logo-text h1 { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
     .logo-text p { font-size: 0.85rem; color: var(--text-light); }
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
-    .nav-menu { display: flex; gap: 2rem; list-style: none; }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-menu { display: flex; gap: 1.5rem; list-style: none; }
     .nav-menu a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
     .nav-menu a:hover { color: var(--primary); }
-    .lang-switcher { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: white; padding: 0.6rem 1.2rem; border-radius: 25px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(196,30,58,0.3); }
-    .lang-switcher:hover { transform: translateY(-2px); }
+    .lang-switcher { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: white; padding: 0.6rem 1rem; border-radius: 25px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; box-shadow: 0 4px 15px rgba(196,30,58,0.3); transition: transform 0.3s ease, box-shadow 0.3s ease; white-space: nowrap; font-size: 0.85rem; flex-shrink: 0; }
+    .lang-switcher:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,30,58,0.4); }
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
     .menu-toggle span { width: 25px; height: 3px; background: var(--primary); border-radius: 2px; }
     
@@ -47,11 +51,11 @@
     @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
     
     /* Main Content */
-    .main-content { margin-top: 120px; padding: 4rem 2rem; min-height: calc(100vh - 400px); }
-    .container { max-width: 1200px; margin: 0 auto; }
+    .main-content { margin-top: 120px; padding: 4rem 0; min-height: calc(100vh - 400px); }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
     .page-header { text-align: center; margin-bottom: 3rem; }
-    .page-title { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--primary); margin-bottom: 1rem; }
-    .page-subtitle { font-size: 1.3rem; color: var(--text-light); }
+    .page-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; color: var(--primary); margin-bottom: 1rem; line-height: 1.2; }
+    .page-subtitle { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--text-light); }
     
     .content-section { background: white; border-radius: 20px; padding: 3rem; margin-bottom: 2rem; box-shadow: 0 8px 30px rgba(196,30,58,0.1); }
     .section-title { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; }
@@ -67,8 +71,8 @@
     .feature-desc { color: var(--text-light); }
     
     /* Footer */
-    .footer { background: var(--peacock); color: white; padding: 3rem 2rem 1rem; }
-    .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
+    .footer { background: var(--peacock); color: white; padding: 3rem 0 1rem; }
+    .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
     .footer-section h3 { margin-bottom: 1rem; }
     .footer-section p, .footer-section a { color: rgba(255,255,255,0.8); text-decoration: none; line-height: 2; display: block; }
     .footer-section a:hover { color: var(--accent); }
@@ -80,6 +84,9 @@
     @keyframes pulse { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 4px 30px rgba(37,211,102,0.7); } }
     
     @media (max-width: 768px) {
+      .nav-content { padding: 0 1rem; }
+      .container, .content-container { padding: 0 1rem; }
+      .footer-content { padding: 0 1rem; }
       .nav-right { position: fixed; top: 120px; left: -100%; width: 100%; height: calc(100vh - 120px); background: white; flex-direction: column; padding: 2rem; transition: left 0.3s; }
       .nav-right.active { left: 0; }
       .nav-menu { flex-direction: column; width: 100%; }
@@ -107,10 +114,11 @@
       <div class="nav-right">
         <ul class="nav-menu">
           <li><a href="../index.html" data-lang="en">Home</a><a href="../index.html" data-lang="ta" class="tamil">முகப்பு</a></li>
-          <li><a href="about.html" data-lang="en">About Temple</a><a href="about.html" data-lang="ta" class="tamil">கோயில் அறிமுகம்</a></li>
+          <li><a href="about.html" data-lang="en">About</a><a href="about.html" data-lang="ta" class="tamil">அறிமுகம்</a></li>
           <li><a href="history.html" data-lang="en">History</a><a href="history.html" data-lang="ta" class="tamil">வரலாறு</a></li>
           <li><a href="festivals.html" data-lang="en">Festivals</a><a href="festivals.html" data-lang="ta" class="tamil">திருவிழாக்கள்</a></li>
           <li><a href="timings.html" data-lang="en">Timings</a><a href="timings.html" data-lang="ta" class="tamil">நேரங்கள்</a></li>
+          <li><a href="donation.html" data-lang="en">Donation</a><a href="donation.html" data-lang="ta" class="tamil">நன்கொடை</a></li>
           <li><a href="gallery.html" data-lang="en">Gallery</a><a href="gallery.html" data-lang="ta" class="tamil">படத்தொகுப்பு</a></li>
           <li><a href="contact.html" data-lang="en">Contact</a><a href="contact.html" data-lang="ta" class="tamil">தொடர்பு</a></li>
         </ul>
@@ -222,6 +230,8 @@
     <div class="footer-bottom">
       <p data-lang="en">© 2026 Thirukoshtiyur Temple. All rights reserved.</p>
       <p data-lang="ta" class="tamil">© 2026 திருக்கோஷ்டியூர் கோயில். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem;" data-lang="en">For Advertisement: <a href="mailto:contact@thirukoshtiyur.com" style="color: var(--accent); text-decoration: none;">contact@thirukoshtiyur.com</a></p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem;" data-lang="ta" class="tamil">விளம்பரத்திற்கு: <a href="mailto:contact@thirukoshtiyur.com" style="color: var(--accent); text-decoration: none;">contact@thirukoshtiyur.com</a></p>
     </div>
   </footer>
 

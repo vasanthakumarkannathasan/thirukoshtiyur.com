@@ -30,6 +30,12 @@
       box-sizing: border-box;
     }
     
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
     :root {
       --primary: #C41E3A;
       --primary-dark: #8B0000;
@@ -47,7 +53,9 @@
       font-family: 'Inter', sans-serif;
       color: var(--text);
       line-height: 1.6;
+      background: var(--cream);
       overflow-x: hidden;
+      min-height: 100vh;
     }
     
     .tamil {
@@ -71,6 +79,19 @@
       font-family: 'Noto Sans Tamil', sans-serif;
     }
     
+    /* Professional Master Container System */
+    .page-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .content-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
     /* Modern Navbar */
     .navbar {
       position: fixed;
@@ -81,12 +102,13 @@
       backdrop-filter: blur(10px);
       box-shadow: 0 2px 20px rgba(196, 30, 58, 0.1);
       z-index: 1000;
-      padding: 1rem 2rem;
+      padding: 1rem 0;
     }
     
     .nav-content {
       max-width: 1200px;
       margin: 0 auto;
+      padding: 0 2rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -120,12 +142,12 @@
     .nav-right {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1.5rem;
     }
     
     .nav-menu {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       list-style: none;
       align-items: center;
     }
@@ -146,16 +168,18 @@
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       border: none;
       color: white;
-      padding: 0.6rem 1.2rem;
+      padding: 0.6rem 1rem;
       border-radius: 25px;
       cursor: pointer;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       transition: all 0.3s;
       box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.4rem;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     
     .lang-switcher:hover {
@@ -381,6 +405,7 @@
     .container {
       max-width: 1200px;
       margin: 0 auto;
+      padding: 0 2rem;
     }
     
     .section-header {
@@ -462,103 +487,6 @@
     .card-text {
       color: var(--text-light);
       line-height: 1.8;
-    }
-    
-    /* Deity Spotlight */
-    .deity-spotlight {
-      padding: 4rem 2rem;
-      background: white;
-    }
-    
-    .deity-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-    
-    .deity-image {
-      border-radius: 30px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(196, 30, 58, 0.2);
-      position: relative;
-    }
-    
-    .deity-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition: transform 0.5s;
-    }
-    
-    .deity-image:hover img {
-      transform: scale(1.05);
-    }
-    
-    .deity-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(180deg, transparent 0%, rgba(196, 30, 58, 0.1) 100%);
-      pointer-events: none;
-    }
-    
-    .deity-info h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 800;
-      color: var(--primary);
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-    
-    .deity-info h3 {
-      font-size: 1.5rem;
-      color: var(--secondary);
-      margin-bottom: 2rem;
-    }
-    
-    .deity-info p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: var(--text-light);
-      margin-bottom: 1.5rem;
-    }
-    
-    .features {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-    
-    .feature-item {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
-      background: var(--cream);
-      border-radius: 15px;
-    }
-    
-    .feature-icon {
-      width: 50px;
-      height: 50px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    
-    .feature-text {
-      color: var(--text);
-      font-weight: 600;
     }
     
     /* Contact CTA */
@@ -690,11 +618,64 @@
       0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
       50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.7); }
     }
+    Tablet Responsive */
+    @media (max-width: 1200px) {
+      .navbar {
+        padding: 1rem;
+      }
+      
+      .nav-menu {
+        gap: 1.2rem;
+      }
+      
+      .nav-menu a {
+        font-size: 0.9rem;
+      }
+      
+      .nav-right {
+        gap: 1.2rem;
+      }
+      
+      .lang-switcher {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+        gap: 0.3rem;
+      }
+    }
     
+    @media (max-width: 992px) {
+      .nav-menu {
+        gap: 1rem;
+      }
+      
+      .nav-menu a {
+        font-size: 0.85rem;
+      }
+      
+      .nav-right {
+        gap: 1rem;
+      }
+    }
+    
+    /* 
     /* Mobile Responsive */
     @media (max-width: 768px) {
       .navbar {
-        padding: 1rem;
+        padding: 1rem 0;
+      }
+      
+      .nav-content {
+        padding: 0 1rem;
+      }
+      
+      .container,
+      .content-container,
+      .page-wrapper {
+        padding: 0 1rem;
+      }
+      
+      .footer-content {
+        padding: 0 1rem;
       }
       
       .notification-banner {
@@ -787,10 +768,11 @@
       <div class="nav-right">
         <ul class="nav-menu">
           <li><a href="/" data-lang="en">Home</a><a href="/" data-lang="ta" class="tamil">முகப்பு</a></li>
-          <li><a href="./pages/about.html" data-lang="en">About Temple</a><a href="./pages/about.html" data-lang="ta" class="tamil">கோயில் அறிமுகம்</a></li>
+          <li><a href="./pages/about.html" data-lang="en">About</a><a href="./pages/about.html" data-lang="ta" class="tamil">அறிமுகம்</a></li>
           <li><a href="./pages/history.html" data-lang="en">History</a><a href="./pages/history.html" data-lang="ta" class="tamil">வரலாறு</a></li>
           <li><a href="./pages/festivals.html" data-lang="en">Festivals</a><a href="./pages/festivals.html" data-lang="ta" class="tamil">திருவிழாக்கள்</a></li>
           <li><a href="./pages/timings.html" data-lang="en">Timings</a><a href="./pages/timings.html" data-lang="ta" class="tamil">நேரங்கள்</a></li>
+          <li><a href="./pages/donation.html" data-lang="en">Donation</a><a href="./pages/donation.html" data-lang="ta" class="tamil">நன்கொடை</a></li>
           <li><a href="./pages/gallery.html" data-lang="en">Gallery</a><a href="./pages/gallery.html" data-lang="ta" class="tamil">படத்தொகுப்பு</a></li>
           <li><a href="./pages/contact.html" data-lang="en">Contact</a><a href="./pages/contact.html" data-lang="ta" class="tamil">தொடர்பு</a></li>
         </ul>
@@ -901,7 +883,7 @@
       <p class="hero-mantra tamil" data-lang="ta">|| ஓம் நமோ நாராயணாய ||</p>
       
       <div class="hero-buttons">
-        <a href="./pages/about.html" class="btn btn-primary" data-lang="en">Learn About Temple</a>
+        <a href="./pages/about.html" class="btn btn-primary" data-lang="en">Learn About</a>
         <a href="./pages/about.html" class="btn btn-primary tamil" data-lang="ta">கோயில் பற்றி அறிக</a>
         
         <a href="./pages/contact.html" class="btn btn-outline" data-lang="en">Contact Us</a>
@@ -927,7 +909,7 @@
             <div class="card-icon">🛕</div>
           </div>
           <div class="card-body">
-            <h3 class="card-title" data-lang="en">About Temple</h3>
+            <h3 class="card-title" data-lang="en">About</h3>
             <h3 class="card-title tamil" data-lang="ta">கோயில் அறிமுகம்</h3>
             
             <p class="card-text" data-lang="en">Complete history, significance and importance of Thirukoshtiyur Temple</p>
@@ -945,6 +927,19 @@
             
             <p class="card-text" data-lang="en">Daily pooja schedule and temple opening hours</p>
             <p class="card-text tamil" data-lang="ta">தினசரி பூஜை நேரங்கள் மற்றும் கோயில் திறக்கும் நேரங்கள்</p>
+          </div>
+        </a>
+        
+        <a href="./pages/donation.html" class="card">
+          <div class="card-image">
+            <div class="card-icon">🙏</div>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title" data-lang="en">Donation</h3>
+            <h3 class="card-title tamil" data-lang="ta">நன்கொடை</h3>
+            
+            <p class="card-text" data-lang="en">Support temple & Annadanam - Your contribution matters</p>
+            <p class="card-text tamil" data-lang="ta">கோயில் மற்றும் அன்னதானத்திற்கு ஆதரவு - உங்கள் பங்களிப்பு முக்கியம்</p>
           </div>
         </a>
         
@@ -1003,57 +998,6 @@
     </div>
   </section>
 
-  <!-- Deity Spotlight -->
-  <section class="deity-spotlight">
-    <div class="container">
-      <div class="deity-content">
-        <div class="deity-image">
-          <img src="./img/Sowmiyan.jpeg" alt="Sri Sowmiya Narayana Perumal">
-        </div>
-        
-        <div class="deity-info">
-          <h2 data-lang="en">Sri Sowmiya Narayana Perumal</h2>
-          <h2 data-lang="ta" class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள்</h2>
-          
-          <h3 data-lang="en">With Thirumagal Nachiyar</h3>
-          <h3 data-lang="ta" class="tamil">திருமகள் நாச்சியாருடன் சேர்ந்து எழுந்தருளியுள்ளார்</h3>
-          
-          <p data-lang="en">
-            Thirukoshtiyur Divya Desam is one of the 108 Vaishnavite Divya Desams. 
-            The presiding deity Sri Sowmiya Narayana Perumal is in three postures - 
-            standing, sitting, and reclining.
-          </p>
-          <p data-lang="ta" class="tamil">
-            திருக்கோஷ்டியூர் திவ்ய தேசம் 108 வைணவ திவ்ய தேசங்களில் ஒன்றாகும். 
-            இக்கோயிலின் மூலவர் ஸ்ரீ சௌமிய நாராயண பெருமாள் மூன்று நிலைகளில் 
-            எழுந்தருளியுள்ளார் - நின்ற கோலம், அமர்ந்த கோலம், மற்றும் சயன கோலம்.
-          </p>
-          
-          <div class="features">
-            <div class="feature-item">
-              <div class="feature-icon">🎯</div>
-              <div class="feature-text" data-lang="en">Known as Southern Badrinath</div>
-              <div class="feature-text tamil" data-lang="ta">தென் பத்ரிநாத் என்று அழைக்கப்படுகிறது</div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon">🏛️</div>
-              <div class="feature-text" data-lang="en">96 feet tall Ashtanga Vimanam</div>
-              <div class="feature-text tamil" data-lang="ta">96 அடி உயரம் கொண்ட அஷ்டாங்க விமானம்</div>
-            </div>
-            <div class="feature-item">
-              <div class="feature-icon">📿</div>
-              <div class="feature-text" data-lang="en">Ramanuja visited 18 times</div>
-              <div class="feature-text tamil" data-lang="ta">ராமானுஜர் 18 முறை வந்த புனித தலம்</div>
-            </div>
-          </div>
-          
-          <a href="./pages/about.html" class="btn btn-primary" data-lang="en">Learn More</a>
-          <a href="./pages/about.html" class="btn btn-primary tamil" data-lang="ta">மேலும் அறிய</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Contact CTA -->
   <section class="contact-cta">
     <div class="container">
@@ -1108,7 +1052,7 @@
         <h3 data-lang="en">Quick Links</h3>
         <h3 data-lang="ta" class="tamil">விரைவு இணைப்புகள்</h3>
         
-        <a href="./pages/about.html" data-lang="en">About Temple</a>
+        <a href="./pages/about.html" data-lang="en">About</a>
         <a href="./pages/about.html" data-lang="ta" class="tamil">கோயில் அறிமுகம்</a>
         
         <a href="./pages/history.html" data-lang="en">History</a>
@@ -1150,6 +1094,8 @@
     <div class="footer-bottom">
       <p data-lang="en">© 2026 Thirukoshtiyur Temple. All rights reserved.</p>
       <p data-lang="ta" class="tamil">© 2026 திருக்கோஷ்டியூர் கோயில். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem;" data-lang="en">For Advertisement: <a href="mailto:contact@thirukoshtiyur.com" style="color: var(--accent); text-decoration: none;">contact@thirukoshtiyur.com</a></p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem;" data-lang="ta" class="tamil">விளம்பரத்திற்கு: <a href="mailto:contact@thirukoshtiyur.com" style="color: var(--accent); text-decoration: none;">contact@thirukoshtiyur.com</a></p>
     </div>
   </footer>
 
