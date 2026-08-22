@@ -15,16 +15,16 @@
     [data-lang]:not([data-lang="en"]) { display: none; }
     body.tamil-mode [data-lang="en"] { display: none; }
     body.tamil-mode [data-lang="ta"] { display: block; }
-    .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(196,30,58,0.1); z-index: 1000; padding: 1rem 2rem; }
+    .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(196,30,58,0.1); z-index: 1000; padding: 1rem 1.5rem; }
     .nav-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
     .logo { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
     .logo img { width: 50px; height: 50px; }
     .logo-text h1 { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
     .logo-text p { font-size: 0.85rem; color: var(--text-light); }
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
-    .nav-menu { display: flex; gap: 2rem; list-style: none; }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-menu { display: flex; gap: 1.5rem; list-style: none; }
     .nav-menu a { text-decoration: none; color: var(--text); font-weight: 500; }
-    .lang-switcher { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: white; padding: 0.6rem 1.2rem; border-radius: 25px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; }
+    .lang-switcher { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: white; padding: 0.6rem 1rem; border-radius: 25px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.4rem; box-shadow: 0 4px 15px rgba(196,30,58,0.3); white-space: nowrap; font-size: 0.85rem; flex-shrink: 0; }
     .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
     .menu-toggle span { width: 25px; height: 3px; background: var(--primary); border-radius: 2px; }
     .notification-banner { position: fixed; top: 70px; left: 0; right: 0; background: linear-gradient(90deg, var(--secondary), var(--accent)); color: white; padding: 0.8rem 0; z-index: 999; overflow: hidden; }
