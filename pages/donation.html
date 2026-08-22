@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation | Sri Sowmiya Narayana Perumal Temple</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --primary: #C41E3A;
+      --secondary: #FF6B35;
+      --accent: #FFB703;
+      --peacock: #023047;
+      --cream: #FFF8F0;
+      --text: #1A1A1A;
+      --text-light: #4A4A4A;
+    }
+    body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--cream); }
+    .tamil { font-family: 'Noto Sans Tamil', sans-serif; }
+    [data-lang]:not([data-lang="en"]) { display: none; }
+    body.tamil-mode [data-lang="en"] { display: none; }
+    body.tamil-mode [data-lang="ta"] { display: block; }
+    
+    /* Navbar */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); box-shadow: 0 2px 20px rgba(196,30,58,0.1); z-index: 1000; padding: 1rem 2rem; }
+    .nav-content { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .logo { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+    .logo img { width: 50px; height: 50px; }
+    .logo-text h1 { font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+    .logo-text p { font-size: 0.85rem; color: var(--text-light); }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-menu { display: flex; gap: 2rem; list-style: none; }
+    .nav-menu a { text-decoration: none; color: var(--text); font-weight: 500; transition: color 0.3s; }
+    .nav-menu a:hover { color: var(--primary); }
+    .lang-switcher { background: linear-gradient(135deg, var(--primary), var(--secondary)); border: none; color: white; padding: 0.6rem 1.2rem; border-radius: 25px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(196,30,58,0.3); }
+    .lang-switcher:hover { transform: translateY(-2px); }
+    .menu-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
+    .menu-toggle span { width: 25px; height: 3px; background: var(--primary); border-radius: 2px; }
+    
+    /* Notification Banner */
+    .notification-banner { position: fixed; top: 70px; left: 0; right: 0; background: linear-gradient(90deg, var(--primary), var(--accent)); color: white; padding: 0.8rem 0; z-index: 999; overflow: hidden; }
+    .notification-content { display: flex; white-space: nowrap; animation: scroll-left 30s linear infinite; }
+    .notification-item { display: inline-flex; align-items: center; padding: 0 3rem; font-weight: 600; }
+    .notification-icon { margin-right: 0.8rem; font-size: 1.3rem; }
+    @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    
+    /* Main Content */
+    .main-content { margin-top: 120px; padding: 4rem 2rem; min-height: calc(100vh - 400px); }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .page-header { text-align: center; margin-bottom: 3rem; }
+    .page-title { font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: var(--primary); margin-bottom: 1rem; }
+    .page-subtitle { font-size: 1.3rem; color: var(--text-light); margin-bottom: 2rem; }
+    
+    .donation-section { background: white; border-radius: 20px; padding: 3rem; margin-bottom: 2rem; box-shadow: 0 8px 30px rgba(196,30,58,0.1); }
+    .section-title { font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem; text-align: center; }
+    
+    .qr-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 2rem; }
+    .qr-card { text-align: center; padding: 2rem; background: var(--cream); border-radius: 15px; }
+    .qr-card img { width: 100%; max-width: 300px; height: auto; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 1rem; }
+    .qr-title { font-size: 1.3rem; font-weight: 600; color: var(--primary); margin-bottom: 0.5rem; }
+    
+    .bank-details { background: linear-gradient(135deg, var(--cream), white); padding: 2.5rem; border-radius: 15px; border-left: 5px solid var(--primary); }
+    .bank-info { display: grid; gap: 1rem; margin-top: 1.5rem; }
+    .bank-row { display: flex; justify-content: space-between; padding: 1rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .bank-label { font-weight: 600; color: var(--primary); }
+    .bank-value { font-weight: 500; color: var(--text); }
+    
+    .annadanam-section { text-align: center; padding: 3rem; background: linear-gradient(135deg, var(--secondary), var(--accent)); border-radius: 20px; color: white; }
+    .annadanam-section img { width: 100%; max-width: 800px; height: auto; border-radius: 15px; margin-top: 2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.3); }
+    .annadanam-title { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; }
+    .annadanam-text { font-size: 1.2rem; line-height: 1.8; max-width: 800px; margin: 0 auto; }
+    
+    .highlight-box { background: var(--accent); color: var(--text); padding: 2rem; border-radius: 15px; text-align: center; margin: 2rem 0; }
+    .highlight-box h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+    .highlight-box p { font-size: 1.1rem; line-height: 1.6; }
+    
+    /* Footer */
+    .footer { background: var(--peacock); color: white; padding: 3rem 2rem 1rem; }
+    .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 2rem; }
+    .footer-section h3 { margin-bottom: 1rem; }
+    .footer-section p, .footer-section a { color: rgba(255,255,255,0.8); text-decoration: none; line-height: 2; display: block; }
+    .footer-section a:hover { color: var(--accent); }
+    .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
+    
+    /* WhatsApp */
+    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
+    .whatsapp-float a { width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); animation: pulse 2s infinite; text-decoration: none; color: white; font-size: 30px; }
+    @keyframes pulse { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 4px 30px rgba(37,211,102,0.7); } }
+    
+    @media (max-width: 768px) {
+      .nav-right { position: fixed; top: 120px; left: -100%; width: 100%; height: calc(100vh - 120px); background: white; flex-direction: column; padding: 2rem; transition: left 0.3s; }
+      .nav-right.active { left: 0; }
+      .nav-menu { flex-direction: column; width: 100%; }
+      .menu-toggle { display: flex; }
+      .qr-grid { grid-template-columns: 1fr; }
+      .bank-row { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-content">
+      <a href="../index.html" class="logo">
+        <img src="../assets/images/logo/namam.svg" alt="Logo">
+        <div class="logo-text">
+          <h1 data-lang="en">Thirukoshtiyur</h1>
+          <h1 data-lang="ta" class="tamil">திருக்கோஷ்டியூர்</h1>
+          <p data-lang="en">Southern Badrinath</p>
+          <p data-lang="ta" class="tamil">தென் பத்ரிநாத்</p>
+        </div>
+      </a>
+      <div class="menu-toggle" onclick="document.querySelector('.nav-right').classList.toggle('active')">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-menu">
+          <li><a href="../index.html" data-lang="en">Home</a><a href="../index.html" data-lang="ta" class="tamil">முகப்பு</a></li>
+          <li><a href="about.html" data-lang="en">About</a><a href="about.html" data-lang="ta" class="tamil">அறிமுகம்</a></li>
+          <li><a href="history.html" data-lang="en">History</a><a href="history.html" data-lang="ta" class="tamil">வரலாறு</a></li>
+          <li><a href="festivals.html" data-lang="en">Festivals</a><a href="festivals.html" data-lang="ta" class="tamil">திருவிழாக்கள்</a></li>
+          <li><a href="timings.html" data-lang="en">Timings</a><a href="timings.html" data-lang="ta" class="tamil">நேரங்கள்</a></li>
+          <li><a href="donation.html" data-lang="en">Donation</a><a href="donation.html" data-lang="ta" class="tamil">நன்கொடை</a></li>
+          <li><a href="gallery.html" data-lang="en">Gallery</a><a href="gallery.html" data-lang="ta" class="tamil">படத்தொகுப்பு</a></li>
+          <li><a href="contact.html" data-lang="en">Contact</a><a href="contact.html" data-lang="ta" class="tamil">தொடர்பு</a></li>
+        </ul>
+        <button class="lang-switcher" onclick="toggleLanguage()">
+          <span>🌐</span>
+          <span data-lang="en">தமிழ்</span>
+          <span data-lang="ta">English</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="notification-banner">
+    <div class="notification-content">
+      <div class="notification-item" data-lang="en"><span class="notification-icon">🙏</span><span>Support Sri Sowmiya Narayana Perumal Temple - Your Contribution Makes a Difference</span></div>
+      <div class="notification-item tamil" data-lang="ta"><span class="notification-icon">🙏</span><span>ஸ்ரீ சௌமிய நாராயண பெருமாள் கோயிலுக்கு உங்கள் நன்கொடை முக்கியம்</span></div>
+      <div class="notification-item" data-lang="en"><span class="notification-icon">🙏</span><span>Support Sri Sowmiya Narayana Perumal Temple - Your Contribution Makes a Difference</span></div>
+      <div class="notification-item tamil" data-lang="ta"><span class="notification-icon">🙏</span><span>ஸ்ரீ சௌமிய நாராயண பெருமாள் கோயிலுக்கு உங்கள் நன்கொடை முக்கியம்</span></div>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="container">
+      <div class="page-header">
+        <h1 class="page-title" data-lang="en">Temple Donation</h1>
+        <h1 class="page-title tamil" data-lang="ta">கோயில் நன்கொடை</h1>
+        <p class="page-subtitle" data-lang="en">Support the Temple Activities & Annadanam</p>
+        <p class="page-subtitle tamil" data-lang="ta">கோயில் நடவடிக்கைகள் மற்றும் அன்னதானத்திற்கு ஆதரவு</p>
+      </div>
+
+      <!-- QR Codes Section -->
+      <div class="donation-section">
+        <h2 class="section-title" data-lang="en">Scan QR Code to Donate</h2>
+        <h2 class="section-title tamil" data-lang="ta">நன்கொடை அளிக்க QR குறியீடு ஸ்கேன் செய்யவும்</h2>
+        
+        <div class="qr-grid">
+          <div class="qr-card">
+            <img src="../img/01_Donation_QRCode.jpeg" alt="Donation QR Code 1">
+            <h3 class="qr-title" data-lang="en">Donation QR Code</h3>
+            <h3 class="qr-title tamil" data-lang="ta">நன்கொடை QR குறியீடு</h3>
+            <p data-lang="en">Scan to donate via UPI</p>
+            <p data-lang="ta" class="tamil">UPI மூலம் நன்கொடை செய்ய</p>
+          </div>
+          
+          <div class="qr-card">
+            <img src="../img/02_QRCode.jpeg" alt="Donation QR Code 2">
+            <h3 class="qr-title" data-lang="en">Alternative QR Code</h3>
+            <h3 class="qr-title tamil" data-lang="ta">மாற்று QR குறியீடு</h3>
+            <p data-lang="en">Scan to donate via UPI</p>
+            <p data-lang="ta" class="tamil">UPI மூலம் நன்கொடை செய்ய</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bank Details Section -->
+      <div class="donation-section">
+        <h2 class="section-title" data-lang="en">Bank Details for Direct Transfer</h2>
+        <h2 class="section-title tamil" data-lang="ta">நேரடி பரிமாற்றத்திற்கான வங்கி விவரங்கள்</h2>
+        
+        <div class="bank-details">
+          <div class="bank-info">
+            <div class="bank-row">
+              <span class="bank-label" data-lang="en">Bank Name:</span>
+              <span class="bank-label tamil" data-lang="ta">வங்கி பெயர்:</span>
+              <span class="bank-value">Tamilnadu Grama Bank</span>
+            </div>
+            
+            <div class="bank-row">
+              <span class="bank-label" data-lang="en">Branch:</span>
+              <span class="bank-label tamil" data-lang="ta">கிளை:</span>
+              <span class="bank-value">Thiruppathur, Sivagangai District</span>
+            </div>
+            
+            <div class="bank-row">
+              <span class="bank-label" data-lang="en">Account Number:</span>
+              <span class="bank-label tamil" data-lang="ta">கணக்கு எண்:</span>
+              <span class="bank-value">10070138216</span>
+            </div>
+            
+            <div class="bank-row">
+              <span class="bank-label" data-lang="en">IFSC Code:</span>
+              <span class="bank-label tamil" data-lang="ta">IFSC குறியீடு:</span>
+              <span class="bank-value">IDIBOPLB001</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <h3 data-lang="en">📝 Important Note</h3>
+          <h3 data-lang="ta" class="tamil">📝 முக்கிய குறிப்பு</h3>
+          <p data-lang="en">After making the donation, please send your receipt/transaction details to our WhatsApp number: <strong>+91 88383 36460</strong> or email: <strong>info@thirukoshtiyur.com</strong></p>
+          <p data-lang="ta" class="tamil">நன்கொடை செய்த பிறகு, உங்கள் ரசீது/பரிவர்த்தனை விவரங்களை எங்கள் WhatsApp எண்ணுக்கு அனுப்பவும்: <strong>+91 88383 36460</strong> அல்லது மின்னஞ்சல்: <strong>info@thirukoshtiyur.com</strong></p>
+        </div>
+      </div>
+
+      <!-- Annadanam Section -->
+      <div class="annadanam-section">
+        <h2 class="annadanam-title" data-lang="en">🍚 Annadanam - Sacred Food Service</h2>
+        <h2 class="annadanam-title tamil" data-lang="ta">🍚 அன்னதானம் - புனித உணவு சேவை</h2>
+        
+        <p class="annadanam-text" data-lang="en">
+          <strong>Your contribution is invaluable!</strong><br>
+          Help us feed devotees who visit our temple. Annadanam is considered one of the most sacred services.<br>
+          Every grain donated is a blessing multiplied. Join us in this noble cause.
+        </p>
+        <p class="annadanam-text tamil" data-lang="ta">
+          <strong>உங்கள் பங்களிப்பு விலைமதிப்பற்றது!</strong><br>
+          எங்கள் கோயிலுக்கு வரும் பக்தர்களுக்கு உணவளிக்க எங்களுக்கு உதவுங்கள். அன்னதானம் மிகவும் புனிதமான சேவைகளில் ஒன்றாக கருதப்படுகிறது.<br>
+          தானமாக வழங்கப்படும் ஒவ்வொரு தானியமும் பன்மடங்கு ஆசீர்வாதம். இந்த உன்னத காரியத்தில் எங்களுடன் சேருங்கள்.
+        </p>
+
+        <img src="../img/Annadhana_Donors_List.jpeg" alt="Annadanam Donors List">
+        
+        <div class="highlight-box" style="margin-top: 2rem; background: white;">
+          <h3 data-lang="en" style="color: var(--primary);">🙏 Reserve Your Place for Annadanam</h3>
+          <h3 data-lang="ta" class="tamil" style="color: var(--primary);">🙏 அன்னதானத்திற்கு உங்கள் இடத்தை முன்பதிவு செய்யுங்கள்</h3>
+          <p data-lang="en" style="color: var(--text);">
+            Limited slots available. Book your Annadanam service and be part of this divine offering.<br>
+            Contact us for sponsorship details and available dates.
+          </p>
+          <p data-lang="ta" class="tamil" style="color: var(--text);">
+            குறைவான இடங்கள் உள்ளன. உங்கள் அன்னதான சேவையை முன்பதிவு செய்து இந்த தெய்வீக காணிக்கையின் ஒரு பகுதியாக இருங்கள்.<br>
+            ஸ்பான்சர்ஷிப் விவரங்கள் மற்றும் கிடைக்கும் தேதிகளுக்கு எங்களை தொடர்பு கொள்ளவும்.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 data-lang="en">Thirukoshtiyur</h3>
+        <h3 data-lang="ta" class="tamil">திருக்கோஷ்டியூர்</h3>
+        <p data-lang="en">Sri Sowmiya Narayana Perumal Temple</p>
+        <p data-lang="ta" class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள் திருக்கோயில்</p>
+      </div>
+      <div class="footer-section">
+        <h3 data-lang="en">Quick Links</h3>
+        <h3 data-lang="ta" class="tamil">விரைவு இணைப்புகள்</h3>
+        <a href="../index.html" data-lang="en">Home</a>
+        <a href="../index.html" data-lang="ta" class="tamil">முகப்பு</a>
+        <a href="about.html" data-lang="en">About</a>
+        <a href="about.html" data-lang="ta" class="tamil">அறிமுகம்</a>
+        <a href="timings.html" data-lang="en">Timings</a>
+        <a href="timings.html" data-lang="ta" class="tamil">நேரங்கள்</a>
+        <a href="donation.html" data-lang="en">Donation</a>
+        <a href="donation.html" data-lang="ta" class="tamil">நன்கொடை</a>
+      </div>
+      <div class="footer-section">
+        <h3 data-lang="en">Contact</h3>
+        <h3 data-lang="ta" class="tamil">தொடர்பு</h3>
+        <p>📞 04575-241233</p>
+        <p>📧 info@thirukoshtiyur.com</p>
+        <p>💬 +91 88383 36460</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-lang="en">© 2026 Thirukoshtiyur Temple. All rights reserved.</p>
+      <p data-lang="ta" class="tamil">© 2026 திருக்கோஷ்டியூர் கோயில். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+    </div>
+  </footer>
+
+  <div class="whatsapp-float">
+    <a href="https://wa.me/918838336460" target="_blank" aria-label="WhatsApp">
+      💬
+    </a>
+  </div>
+
+  <script>
+    function toggleLanguage() {
+      document.body.classList.toggle('tamil-mode');
+      const lang = document.body.classList.contains('tamil-mode') ? 'ta' : 'en';
+      localStorage.setItem('preferredLanguage', lang);
+    }
+
+    // Load saved language preference
+    window.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('preferredLanguage');
+      if (lang === 'ta') {
+        document.body.classList.add('tamil-mode');
+      }
+    });
+  </script>
+</body>
+</html>
