@@ -177,7 +177,7 @@ If you want to enable GitHub Pages as backup:
 - Contact CTA with 3 cards (Phone, Email, WhatsApp)
 - Scrolling notification banner
 
-### 2. **About Temple** (`pages/about.html`)
+### 2. **About** (`pages/about.html`)
 - Temple introduction and significance
 - 4 feature cards:
   - Ashtanga Vimanam (96 feet architectural marvel)

@@ -101,7 +101,7 @@ thirukoshtiyur.com/
 ### 🛕 Content Sections
 - ✅ **Hero Section**: Impressive introduction with CTA buttons
 - ✅ **Announcements**: Scrolling ticker with temple updates
-- ✅ **About Temple**: Overview with key features
+- ✅ **About**: Overview with key features
 - ✅ **Temple Specialities**: Unique features & deities
 - ✅ **History**: Origin story & Ramanuja's connection
 - ✅ **Timings & Poojas**: Complete schedule
