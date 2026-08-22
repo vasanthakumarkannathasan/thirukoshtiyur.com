@@ -1,36 +1,147 @@
 # Thirukoshtiyur Temple Website 🛕
 
-Official bilingual website for **Sri Sowmiya Narayana Perumal Temple** (Thirukoshtiyur) - One of 108 Divya Desams, also known as "Then Badri" (Southern Badrinath).
+<div align="center">
 
-## 🌐 Live Website
-- **Production**: https://thirukoshtiyur.com
-- **Hosting**: Cloudflare Pages (auto-deploy from main branch)
-- **Repository**: https://github.com/vasanthakumarkannathasan/thirukoshtiyur.com
+![Temple Banner](https://img.shields.io/badge/Temple-Sri%20Sowmiya%20Narayana%20Perumal-C41E3A?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Live-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
+
+**Official bilingual website for Sri Sowmiya Narayana Perumal Temple (Thirukoshtiyur)**  
+*One of 108 Divya Desams | "Then Badri" (Southern Badrinath)*
+
+[🌐 Visit Website](https://thirukoshtiyur.com) | [📖 Documentation](https://github.com/vasanthakumarkannathasan/thirukoshtiyur.com/tree/main/docs) | [🐛 Report Issue](https://github.com/vasanthakumarkannathasan/thirukoshtiyur.com/issues)
+
+</div>
+
+---
+
+## 📑 Table of Contents
+
+- [✨ Features](#-features)
+- [🚀 Quick Start](#-quick-start)
+- [📁 Project Structure](#-project-structure)
+- [🌐 Live Website](#-live-website)
+- [💻 Development](#-development)
+- [🎨 Design System](#-design-system)
+- [📄 Pages Overview](#-pages-overview)
+- [🌍 Bilingual Implementation](#-bilingual-implementation)
+- [📤 Deployment](#-deployment)
+- [🤝 Contributing](#-contributing)
+- [📞 Contact Information](#-contact-information)
+- [📝 Recent Updates](#-recent-updates)
+- [📋 Future Enhancements](#-future-enhancements)
+- [🆘 Troubleshooting](#-troubleshooting)
+- [📄 License](#-license)
+
+---
 
 ## ✨ Features
 
+<table>
+<tr>
+<td width="50%">
+
 ### 🎨 Modern Design
-- **Vibrant temple colors**: Deep red (#C41E3A), Saffron (#FF6B35), Sacred gold (#FFB703)
-- **Responsive layout**: Mobile-first design with hamburger menu
-- **Card-based navigation**: Clean, organized sections
-- **Gradient backgrounds**: Eye-catching hero sections
+- **Vibrant temple colors** with gradient effects
+- **Professional center-aligned layout** (1200px container)
+- **Card-based navigation** for clean UX
+- **Smooth animations** and transitions
+- **Responsive typography** using clamp()
 
 ### 🌍 Bilingual Support
-- **Primary language**: English (default)
-- **Secondary language**: Tamil (தமிழ்)
-- **Language switcher**: One-click toggle in navigation
-- **Persistent preference**: Saves user's language choice in localStorage
-- **Full coverage**: All pages support both languages
-
-### 🔔 Notification Banner
-- **Scrolling announcements**: Temple timings, special events
-- **Dual language**: Shows messages in selected language
-- **Smooth animation**: 30-second seamless scroll cycle
+- **English** (default) + **Tamil** (தமிழ்)
+- **One-click language toggle** in navbar
+- **Persistent preference** via localStorage
+- **Full coverage** across all 9 pages
+- **Tamil fonts** (Noto Sans Tamil)
 
 ### 📱 Responsive Design
-- **Mobile optimized**: Works perfectly on all screen sizes
-- **Touch-friendly**: Large tap targets, easy navigation
-- **Fast loading**: Optimized images and minimal dependencies
+- **Mobile-first** approach
+- **Progressive breakpoints**: 768px, 992px, 1200px
+- **Hamburger menu** for mobile
+- **Touch-optimized** navigation
+- **No horizontal overflow** on any device
+
+</td>
+<td width="50%">
+
+### 🔔 Interactive Features
+- **Scrolling notification banner** with announcements
+- **WhatsApp floating button** for instant contact
+- **Smooth scroll navigation** within pages
+- **Language switcher** with 🌐 icon
+- **Hover effects** on all interactive elements
+
+### ⚡ Performance
+- **Pure HTML/CSS/JS** (no frameworks)
+- **Fast loading** < 2 seconds
+- **Optimized images** and assets
+- **CDN delivery** via Cloudflare
+- **Automatic SSL/HTTPS**
+
+### ♿ Accessibility
+- **Semantic HTML5** structure
+- **ARIA labels** where needed
+- **Keyboard navigation** support
+- **High contrast** color ratios
+- **Alt text** for all images
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Git installed
+- Web browser (Chrome, Firefox, Edge, Safari)
+- Text editor (VS Code recommended)
+- **Optional**: VS Code Live Server extension
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/vasanthakumarkannathasan/thirukoshtiyur.com.git
+
+# 2. Navigate to project directory
+cd thirukoshtiyur.com
+
+# 3. Open in browser (choose one method)
+# Method A: Direct open
+open index.html  # macOS
+start index.html # Windows
+xdg-open index.html # Linux
+
+# Method B: Using Python (recommended)
+python -m http.server 8000
+# Visit: http://localhost:8000
+
+# Method C: Using VS Code Live Server
+# Right-click index.html → "Open with Live Server"
+```
+
+### First-Time Setup
+
+```bash
+# 1. Create your feature branch
+git checkout -b feature/your-feature-name
+
+# 2. Make changes and test locally
+
+# 3. Commit with descriptive message
+git add .
+git commit -m "feat: your change description"
+
+# 4. Push to GitHub
+git push origin feature/your-feature-name
+
+# 5. Create Pull Request on GitHub for review
+```
+
+---
 
 ## 📁 Project Structure
 
