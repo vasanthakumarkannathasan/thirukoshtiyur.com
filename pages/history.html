@@ -50,6 +50,9 @@
     .whatsapp-float a { width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); animation: pulse 2s infinite; }
     @keyframes pulse { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); } 50% { box-shadow: 0 4px 30px rgba(37,211,102,0.7); } }
     @media (max-width: 768px) {
+      .nav-content { padding: 0 1rem; }
+      .container, .content-container { padding: 0 1rem; }
+      .footer-content { padding: 0 1rem; }
       .nav-right { position: fixed; top: 120px; left: -100%; width: 100%; height: calc(100vh - 120px); background: white; flex-direction: column; padding: 2rem; transition: left 0.3s; }
       .nav-right.active { left: 0; }
       .nav-menu { flex-direction: column; width: 100%; }
