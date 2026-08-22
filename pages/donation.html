@@ -305,14 +305,16 @@
     function toggleLanguage() {
       document.body.classList.toggle('tamil-mode');
       const lang = document.body.classList.contains('tamil-mode') ? 'ta' : 'en';
-      localStorage.setItem('preferredLanguage', lang);
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferred-language', lang);
     }
 
     // Load saved language preference
     window.addEventListener('DOMContentLoaded', () => {
-      const lang = localStorage.getItem('preferredLanguage');
+      const lang = localStorage.getItem('preferred-language');
       if (lang === 'ta') {
         document.body.classList.add('tamil-mode');
+        document.documentElement.lang = 'ta';
       }
     });
   </script>
