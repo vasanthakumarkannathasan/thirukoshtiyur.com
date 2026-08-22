@@ -617,62 +617,236 @@ chore: maintenance tasks
 
 ## 🆘 Troubleshooting
 
-### Issue: Tamil text showing garbled characters
-**Solution**: Ensure file is saved with UTF-8 encoding without BOM.
-```bash
-# In VS Code: Save with Encoding → UTF-8
-# In terminal: file -bi filename.html (should show charset=utf-8)
-```
+<details>
+<summary><strong>Tamil text showing garbled characters</strong></summary>
 
-### Issue: Language toggle not working
-**Solution**: Check browser console for JS errors. Clear localStorage.
+**Problem**: தமிழ் text appears as ???????? or ????
+
+**Solution**: File encoding issue - must be UTF-8
+```bash
+# In VS Code
+File → Save with Encoding → UTF-8 (not UTF-8 with BOM)
+
+# Verify in terminal
+file -bi filename.html
+# Should show: text/html; charset=utf-8
+
+# Fix with Python
+python fix_tamil_encoding.py filename.html
+```
+</details>
+
+<details>
+<summary><strong>Language toggle not working</strong></summary>
+
+**Problem**: Clicking language button doesn't switch
+
+**Solutions**:
 ```javascript
-// Clear saved language preference
-localStorage.removeItem('preferredLanguage');
-```
+// 1. Check browser console for errors (F12)
+// 2. Clear localStorage and try again
+localStorage.removeItem('preferred-language');
+location.reload();
 
-### Issue: Images not loading
-**Solution**: Check file paths (case-sensitive), ensure images are committed to repo.
+// 3. Verify correct localStorage key
+// All pages must use 'preferred-language' (not 'preferredLanguage')
+```
+</details>
+
+<details>
+<summary><strong>Images not loading</strong></summary>
+
+**Problem**: Broken image icons (📷 with ❌)
+
+**Checklist**:
 ```bash
-# Verify image exists
-ls assets/images/path/to/image.jpg
+# 1. Verify image exists at path
+ls assets/images/gallery/photo.jpg
+
+# 2. Check file path case-sensitivity
+# Wrong: /Assets/Images/photo.JPG
+# Right: /assets/images/photo.jpg
+
+# 3. Ensure image is committed to Git
+git add assets/images/photo.jpg
+git commit -m "Add photo"
+git push
+
+# 4. Clear browser cache (Ctrl+Shift+R)
 ```
+</details>
 
-### Issue: Cloudflare not deploying
-**Solution**: 
-1. Check GitHub commit pushed successfully
-2. Check Cloudflare dashboard for build logs
-3. Verify no build errors in logs
-4. Force redeploy in Cloudflare Pages settings
+<details>
+<summary><strong>Cloudflare not deploying</strong></summary>
 
-### Issue: WhatsApp button not clickable
-**Solution**: Check z-index, ensure no overlapping elements.
+**Problem**: Changes pushed but site not updating
+
+**Steps**:
+1. **Verify Git push successful**:
+   ```bash
+   git log --oneline -1  # Should show your commit
+   ```
+
+2. **Check Cloudflare dashboard**:
+   - Login to Cloudflare Pages
+   - View deployment logs
+   - Look for build errors
+
+3. **Common issues**:
+   - Build in progress (wait 60 seconds)
+   - Build failed (check logs)
+   - DNS not propagated (wait 5 minutes)
+
+4. **Force redeploy**:
+   - Cloudflare Pages → Deployments
+   - Click "Retry deployment"
+</details>
+
+<details>
+<summary><strong>Language button cut off on right edge</strong></summary>
+
+**Problem**: "English" button hidden/clipped
+
+**Solution**: Missing responsive breakpoints
 ```css
-.whatsapp-float { z-index: 999; }
+/* Add these media queries */
+@media (max-width: 1200px) {
+  .nav-menu { gap: 1.2rem; font-size: 0.9rem; }
+  .lang-switcher { 
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-menu { gap: 1rem; font-size: 0.85rem; }
+}
 ```
+</details>
 
-## 📚 Documentation
+<details>
+<summary><strong>WhatsApp button not clickable</strong></summary>
 
-Additional documentation available in `/docs` folder:
-- [Contact Form Setup](docs/CONTACT_FORM_SETUP.md)
-- [Adding Instagram Images](docs/ADDING_INSTAGRAM_IMAGES.md)
-- [Sacred Symbols Guide](docs/SACRED_SYMBOLS.md)
+**Problem**: Button visible but click doesn't work
 
-## 🔗 Useful Links
+**Solutions**:
+```css
+/* Ensure proper z-index */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999; /* Must be high */
+}
 
-- **Live Site**: https://thirukoshtiyur.com
-- **GitHub Repo**: https://github.com/vasanthakumarkannathasan/thirukoshtiyur.com
-- **Cloudflare Pages**: (Dashboard access restricted)
-- **Google Fonts**: [Playfair Display](https://fonts.google.com/specimen/Playfair+Display), [Inter](https://fonts.google.com/specimen/Inter), [Noto Sans Tamil](https://fonts.google.com/noto/specimen/Noto+Sans+Tamil)
-
-## 📄 License
-
-Copyright © 2026 Thirukoshtiyur Temple. All rights reserved.
-
-This website and its contents are proprietary to Thirukoshtiyur Temple. Unauthorized reproduction or distribution is prohibited.
+/* Check for overlapping elements */
+/* Footer should have z-index < 999 */
+.footer {
+  z-index: 10;
+}
+```
+</details>
 
 ---
 
-**Built with 🙏 for Sri Sowmiya Narayana Perumal Temple**
+## 📋 Future Enhancements
 
-*"Then Badri" - Southern Badrinath | One of 108 Divya Desams*
+### 🎯 Planned Features
+
+#### Phase 1: Content Enhancement
+- [ ] **Photo Gallery**: Lightbox viewer, image categories, zoom
+- [ ] **Video Gallery**: YouTube embeds, virtual temple tour
+- [ ] **Festival Calendar**: Interactive calendar with dates
+- [ ] **Blog/News**: Temple announcements and updates
+
+#### Phase 2: Interactive Features  
+- [ ] **Online Donations**: Razorpay/PayPal integration
+- [ ] **Pooja Booking**: Online booking system
+- [ ] **Contact Form**: Email notifications backend
+- [ ] **Search Feature**: Site-wide content search
+
+#### Phase 3: Advanced
+- [ ] **Admin Panel**: CMS for content management
+- [ ] **Instagram Feed**: Auto-sync photos from Instagram
+- [ ] **Volunteer Portal**: Event signup and management
+- [ ] **Multilingual**: Add Hindi, Telugu, Kannada
+
+### 🛠️ Technical Improvements
+- [ ] PWA support (offline access, app-like experience)
+- [ ] Service worker for caching
+- [ ] Image lazy loading
+- [ ] WebP format with JPG fallback
+- [ ] Critical CSS inline
+- [ ] CDN for assets
+- [ ] Lighthouse score 95+
+
+---
+
+## 📚 Additional Documentation
+
+| Document | Purpose |
+|----------|---------|
+| [Contact Form Setup](docs/CONTACT_FORM_SETUP.md) | Backend integration guide |
+| [Instagram Images](docs/ADDING_INSTAGRAM_IMAGES.md) | Auto-sync Instagram photos |
+| [Sacred Symbols](docs/SACRED_SYMBOLS.md) | Hindu symbols guide |
+| [DEPLOYMENT.md](DEPLOYMENT.md) | Deployment procedures |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution guidelines |
+| [WEBSITE_COMPLETE.md](WEBSITE_COMPLETE.md) | Completion checklist |
+
+---
+
+## 🤝 Contributors
+
+<a href="https://github.com/vasanthakumarkannathasan/thirukoshtiyur.com/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vasanthakumarkannathasan/thirukoshtiyur.com" />
+</a>
+
+Made with [contrib.rocks](https://contrib.rocks).
+
+---
+
+## 🔗 Important Links
+
+| Resource | URL |
+|----------|-----|
+| 🌐 **Live Website** | https://thirukoshtiyur.com |
+| 💻 **GitHub Repository** | https://github.com/vasanthakumarkannathasan/thirukoshtiyur.com |
+| 📊 **Cloudflare Dashboard** | (Restricted access) |
+| 🎨 **Google Fonts** | [Playfair Display](https://fonts.google.com/specimen/Playfair+Display), [Inter](https://fonts.google.com/specimen/Inter), [Noto Sans Tamil](https://fonts.google.com/noto/specimen/Noto+Sans+Tamil) |
+| 📱 **WhatsApp** | https://wa.me/918838336460 |
+| 📧 **Email** | info@thirukoshtiyur.com |
+
+---
+
+## 📊 Project Stats
+
+![GitHub last commit](https://img.shields.io/github/last-commit/vasanthakumarkannathasan/thirukoshtiyur.com?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/vasanthakumarkannathasan/thirukoshtiyur.com?style=flat-square)
+![GitHub language count](https://img.shields.io/github/languages/count/vasanthakumarkannathasan/thirukoshtiyur.com?style=flat-square)
+![GitHub top language](https://img.shields.io/github/languages/top/vasanthakumarkannathasan/thirukoshtiyur.com?style=flat-square)
+
+---
+
+## 📄 License
+
+<div align="center">
+
+**Copyright © 2026 Thirukoshtiyur Temple. All rights reserved.**
+
+This website and its contents are proprietary to Thirukoshtiyur Temple.  
+Unauthorized reproduction or distribution is prohibited.
+
+---
+
+### Built with 🙏 for Sri Sowmiya Narayana Perumal Temple
+
+**"Then Badri" (தென் பத்ரி) - Southern Badrinath**  
+*One of 108 Divya Desams*
+
+🛕 **Om Namo Narayanaya** 🛕
+
+---
+
+<sub>Last updated: August 2026 | Version 2.0 | [Report Issues](https://github.com/vasanthakumarkannathasan/thirukoshtiyur.com/issues)</sub>
+
+</div>
