@@ -88,6 +88,13 @@
     .footer-section a:hover { color: var(--accent); }
     .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); }
     
+    /* Visitor Counter */
+    .visitor-counter { margin-top: 1.5rem; padding: 1rem; display: inline-flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.1); border-radius: 10px; backdrop-filter: blur(10px); }
+    .visitor-counter-icon { font-size: 1.5rem; }
+    .visitor-counter-content { text-align: left; }
+    .visitor-counter-label { font-size: 0.85rem; color: rgba(255,255,255,0.7); margin-bottom: 0.2rem; }
+    .visitor-counter-number { font-size: 1.5rem; font-weight: 700; color: var(--accent); font-family: 'Courier New', monospace; letter-spacing: 2px; }
+    
     /* WhatsApp */
     .whatsapp-float { position: fixed; bottom: 30px; right: 30px; z-index: 999; }
     .whatsapp-float a { width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); animation: pulse 2s infinite; text-decoration: none; color: white; font-size: 30px; }
@@ -292,6 +299,16 @@
       <p data-lang="ta" class="tamil">© 2026 திருக்கோஷ்டியூர் கோயில். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
       <p style="margin-top: 0.5rem; font-size: 0.9rem;" data-lang="en">For Advertisement: <a href="mailto:contact@thirukoshtiyur.com" style="color: var(--accent); text-decoration: none;">contact@thirukoshtiyur.com</a></p>
       <p style="margin-top: 0.5rem; font-size: 0.9rem;" data-lang="ta" class="tamil">விளம்பரத்திற்கு: <a href="mailto:contact@thirukoshtiyur.com" style="color: var(--accent); text-decoration: none;">contact@thirukoshtiyur.com</a></p>
+      
+      <!-- Visitor Counter -->
+      <div class="visitor-counter">
+        <div class="visitor-counter-icon">👁️</div>
+        <div class="visitor-counter-content">
+          <div class="visitor-counter-label" data-lang="en">Total Visitors</div>
+          <div class="visitor-counter-label tamil" data-lang="ta">மொத்த பார்வையாளர்கள்</div>
+          <div class="visitor-counter-number" id="visitor-count">Loading...</div>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -308,6 +325,22 @@
       document.documentElement.lang = lang;
       localStorage.setItem('preferred-language', lang);
     }
+    
+    // Visitor Counter
+    function initVisitorCounter() {
+      const counterElement = document.getElementById('visitor-count');
+      const namespace = 'thirukoshtiyur.com';
+      const key = 'donation-visitors';
+      fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+        .then(response => response.json())
+        .then(data => counterElement.textContent = data.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
+        .catch(() => {
+          let count = parseInt(localStorage.getItem('visitor-count') || '0');
+          count++;
+          localStorage.setItem('visitor-count', count);
+          counterElement.textContent = count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        });
+    }
 
     // Load saved language preference
     window.addEventListener('DOMContentLoaded', () => {
@@ -316,6 +349,7 @@
         document.body.classList.add('tamil-mode');
         document.documentElement.lang = 'ta';
       }
+      initVisitorCounter();
     });
   </script>
 </body>
