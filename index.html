@@ -588,6 +588,40 @@
       border-top: 1px solid rgba(255, 255, 255, 0.2);
     }
     
+    /* Visitor Counter */
+    .visitor-counter {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+    }
+    
+    .visitor-counter-icon {
+      font-size: 1.5rem;
+    }
+    
+    .visitor-counter-content {
+      text-align: left;
+    }
+    
+    .visitor-counter-label {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 0.2rem;
+    }
+    
+    .visitor-counter-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: 'Courier New', monospace;
+      letter-spacing: 2px;
+    }
+    
     /* WhatsApp Button */
     .whatsapp-float {
       position: fixed;
@@ -1096,6 +1130,16 @@
       <p data-lang="ta" class="tamil">© 2026 திருக்கோஷ்டியூர் கோயில். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
       <p style="margin-top: 0.5rem; font-size: 0.9rem;" data-lang="en">For Advertisement: <a href="mailto:contact@thirukoshtiyur.com" style="color: var(--accent); text-decoration: none;">contact@thirukoshtiyur.com</a></p>
       <p style="margin-top: 0.5rem; font-size: 0.9rem;" data-lang="ta" class="tamil">விளம்பரத்திற்கு: <a href="mailto:contact@thirukoshtiyur.com" style="color: var(--accent); text-decoration: none;">contact@thirukoshtiyur.com</a></p>
+      
+      <!-- Visitor Counter -->
+      <div class="visitor-counter">
+        <div class="visitor-counter-icon">👁️</div>
+        <div class="visitor-counter-content">
+          <div class="visitor-counter-label" data-lang="en">Total Visitors</div>
+          <div class="visitor-counter-label tamil" data-lang="ta">மொத்த பார்வையாளர்கள்</div>
+          <div class="visitor-counter-number" id="visitor-count">Loading...</div>
+        </div>
+      </div>
     </div>
   </footer>
 
@@ -1154,6 +1198,40 @@
       } else {
         navbar.style.boxShadow = '0 2px 20px rgba(196, 30, 58, 0.1)';
       }
+    });
+    
+    // Visitor Counter
+    function initVisitorCounter() {
+      const counterElement = document.getElementById('visitor-count');
+      
+      // Option 1: Using CountAPI (free service)
+      // Visit https://countapi.xyz for more details
+      const namespace = 'thirukoshtiyur.com';
+      const key = 'homepage-visitors';
+      
+      fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+        .then(response => response.json())
+        .then(data => {
+          counterElement.textContent = formatNumber(data.value);
+        })
+        .catch(error => {
+          console.log('Using localStorage counter as fallback');
+          // Fallback to localStorage counter
+          let count = parseInt(localStorage.getItem('visitor-count') || '10000');
+          count++;
+          localStorage.setItem('visitor-count', count);
+          counterElement.textContent = formatNumber(count);
+        });
+    }
+    
+    // Format number with commas (e.g., 1,234,567)
+    function formatNumber(num) {
+      return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    
+    // Initialize visitor counter on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      initVisitorCounter();
     });
   </script>
 </body>
