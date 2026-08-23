@@ -1217,7 +1217,7 @@
         .catch(error => {
           console.log('Using localStorage counter as fallback');
           // Fallback to localStorage counter
-          let count = parseInt(localStorage.getItem('visitor-count') || '10000');
+          let count = parseInt(localStorage.getItem('visitor-count') || '0');
           count++;
           localStorage.setItem('visitor-count', count);
           counterElement.textContent = formatNumber(count);

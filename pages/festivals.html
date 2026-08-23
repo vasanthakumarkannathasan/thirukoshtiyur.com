@@ -199,7 +199,7 @@
         .then(response => response.json())
         .then(data => counterElement.textContent = data.value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
         .catch(() => {
-          let count = parseInt(localStorage.getItem('visitor-count') || '6800');
+          let count = parseInt(localStorage.getItem('visitor-count') || '0');
           count++;
           localStorage.setItem('visitor-count', count);
           counterElement.textContent = count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
