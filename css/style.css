@@ -488,7 +488,8 @@ button, input, select, textarea {
   min-height: 82vh;
   display: flex;
   align-items: center;
-  padding: 50px 0;
+  padding: 160px 0 50px 0;
+  margin-top: 0;
   background: radial-gradient(circle at 50% 20%, rgba(212, 175, 55, 0.15) 0%, rgba(253, 251, 247, 0) 70%),
               linear-gradient(180deg, #FDFBF7 0%, #F5EFE6 100%);
   overflow: hidden;
@@ -1243,6 +1244,10 @@ button, input, select, textarea {
 }
 
 @media (max-width: 1024px) {
+  .hero-section {
+    padding: 140px 0 50px 0;
+  }
+  
   .hero-grid, .vimanam-tier-card, .heritage-grid, .lamp-ritual-grid, .travel-grid {
     grid-template-columns: 1fr;
   }
@@ -1261,6 +1266,10 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 130px 0 40px 0;
+  }
+  
   .hero-title {
     font-size: 2.1rem;
   }
