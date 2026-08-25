@@ -38,6 +38,13 @@
 ## ✨ Features
 
 <table>
+<thead>
+<tr>
+<th width="50%">Core Features</th>
+<th width="50%">Enhanced Features</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td width="50%">
 
@@ -88,6 +95,7 @@
 
 </td>
 </tr>
+</tbody>
 </table>
 
 ---
