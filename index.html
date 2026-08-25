@@ -87,10 +87,76 @@
       width: 100%;
     }
     
+    /* Scrolling Welcome Message Bar */
+    .welcome-scroll-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--secondary));
+      color: white;
+      padding: 0.75rem 0;
+      z-index: 1001;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(196, 30, 58, 0.3);
+      cursor: pointer;
+    }
+    
+    .welcome-scroll-content {
+      display: flex;
+      white-space: nowrap;
+      animation: scroll-right-to-left 20s linear infinite;
+    }
+    
+    /* Pause scrolling animation on hover */
+    .welcome-scroll-bar:hover .welcome-scroll-content {
+      animation-play-state: paused;
+    }
+    
+    /* Pause icon pulse animation on hover */
+    .welcome-scroll-bar:hover .welcome-icon {
+      animation-play-state: paused;
+    }
+    
+    .welcome-message {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 4rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+    
+    .welcome-icon {
+      margin-right: 1rem;
+      font-size: 1.4rem;
+      animation: pulse-welcome 2s ease-in-out infinite;
+    }
+    
+    @keyframes scroll-right-to-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    
+    @keyframes pulse-welcome {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: scale(1.15);
+        opacity: 0.9;
+      }
+    }
+    
     /* Modern Navbar */
     .navbar {
       position: fixed;
-      top: 0;
+      top: 50px;
       left: 0;
       right: 0;
       background: rgba(255, 255, 255, 0.95);
@@ -202,58 +268,6 @@
       transition: 0.3s;
     }
     
-    /* Notification Banner */
-    .notification-banner {
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      background: linear-gradient(90deg, var(--secondary), var(--accent));
-      color: white;
-      padding: 0.8rem 0;
-      z-index: 999;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(196, 30, 58, 0.3);
-    }
-    
-    .notification-content {
-      display: flex;
-      white-space: nowrap;
-      animation: scroll-left 30s linear infinite;
-    }
-    
-    .notification-item {
-      display: inline-flex;
-      align-items: center;
-      padding: 0 3rem;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    
-    .notification-icon {
-      margin-right: 0.8rem;
-      font-size: 1.3rem;
-      animation: pulse-icon 2s ease-in-out infinite;
-    }
-    
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-    
-    @keyframes pulse-icon {
-      0%, 100% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.2);
-      }
-    }
-    
     /* Hero Section - Modern & Impressive */
     .hero {
       position: relative;
@@ -264,7 +278,7 @@
       justify-content: center;
       background: linear-gradient(135deg, #C41E3A 0%, #FF6B35 50%, #FFB703 100%);
       overflow: hidden;
-      margin-top: 120px;
+      margin-top: 70px;
     }
     
     .hero::before {
@@ -677,14 +691,22 @@
         padding: 0 1rem;
       }
       
-      .notification-banner {
-        top: 70px;
-        padding: 0.6rem 0;
+      .welcome-scroll-bar {
+        padding: 0.5rem 0;
       }
       
-      .notification-item {
+      .welcome-message {
         font-size: 0.9rem;
         padding: 0 2rem;
+      }
+      
+      .welcome-icon {
+        font-size: 1.2rem;
+        margin-right: 0.7rem;
+      }
+      
+      .navbar {
+        top: 45px;
       }
       
       .nav-right {
@@ -719,7 +741,7 @@
       }
       
       .hero {
-        margin-top: 120px;
+        margin-top: 65px;
         min-height: 500px;
       }
       
@@ -735,6 +757,28 @@
   </style>
 </head>
 <body class="lang-ta">
+
+  <!-- ================= Scrolling Welcome Message Bar (Home Page Only) ================= -->
+  <div class="welcome-scroll-bar">
+    <div class="welcome-scroll-content">
+      <div class="welcome-message">
+        <span class="welcome-icon">🙏</span>
+        <span>Welcome to Thirukoshtiyur Sri Sowmiya Narayana Temple</span>
+      </div>
+      <div class="welcome-message">
+        <span class="welcome-icon">🕉️</span>
+        <span>Welcome to Thirukoshtiyur Sri Sowmiya Narayana Temple</span>
+      </div>
+      <div class="welcome-message">
+        <span class="welcome-icon">🙏</span>
+        <span>Welcome to Thirukoshtiyur Sri Sowmiya Narayana Temple</span>
+      </div>
+      <div class="welcome-message">
+        <span class="welcome-icon">🕉️</span>
+        <span>Welcome to Thirukoshtiyur Sri Sowmiya Narayana Temple</span>
+      </div>
+    </div>
+  </div>
 
   <!-- ================= Sticky Navigation Bar ================= -->
   <header class="navbar">
@@ -769,46 +813,6 @@
       </div>
     </div>
   </header>
-
-  <!-- ================= Notification Banner ================= -->
-  <div class="notification-banner">
-    <div class="notification-content">
-      <!-- Welcome Message -->
-      <div class="notification-item">
-        <span class="notification-icon">🙏</span>
-        <span data-lang="en">Welcome to Sri Sowmiya Narayana Perumal Temple - 96th Divya Desam</span>
-        <span data-lang="ta" class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள் திருக்கோவிலுக்கு வரவேற்கிறோம் - 96வது திவ்ய தேசம்</span>
-      </div>
-      <!-- Temple Timings -->
-      <div class="notification-item">
-        <span class="notification-icon">⏰</span>
-        <span data-lang="en">Temple Open: Morning 7:00 AM - 12:00 PM | Evening 4:00 PM - 8:00 PM</span>
-        <span data-lang="ta" class="tamil">கோயில் திறக்கும் நேரம்: காலை 7:00 - 12:00 | மாலை 4:00 - 8:00</span>
-      </div>
-      <!-- Contact Info -->
-      <div class="notification-item">
-        <span class="notification-icon">📞</span>
-        <span data-lang="en">Contact: 04575-241233 | WhatsApp: +91 88383 36460</span>
-        <span data-lang="ta" class="tamil">தொடர்பு: 04575-241233 | வாட்ஸ்அப்: +91 88383 36460</span>
-      </div>
-      <!-- Duplicate for seamless loop -->
-      <div class="notification-item">
-        <span class="notification-icon">🙏</span>
-        <span data-lang="en">Welcome to Sri Sowmiya Narayana Perumal Temple - 96th Divya Desam</span>
-        <span data-lang="ta" class="tamil">ஸ்ரீ சௌமிய நாராயண பெருமாள் திருக்கோவிலுக்கு வரவேற்கிறோம் - 96வது திவ்ய தேசம்</span>
-      </div>
-      <div class="notification-item">
-        <span class="notification-icon">⏰</span>
-        <span data-lang="en">Temple Open: Morning 7:00 AM - 12:00 PM | Evening 4:00 PM - 8:00 PM</span>
-        <span data-lang="ta" class="tamil">கோயில் திறக்கும் நேரம்: காலை 7:00 - 12:00 | மாலை 4:00 - 8:00</span>
-      </div>
-      <div class="notification-item">
-        <span class="notification-icon">📞</span>
-        <span data-lang="en">Contact: 04575-241233 | WhatsApp: +91 88383 36460</span>
-        <span data-lang="ta" class="tamil">தொடர்பு: 04575-241233 | வாட்ஸ்அப்: +91 88383 36460</span>
-      </div>
-    </div>
-  </div>
 
   <!-- ================= Mobile Drawer Navigation ================= -->
   <div id="mobileNavOverlay" class="mobile-nav-overlay"></div>
